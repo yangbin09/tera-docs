@@ -12,6 +12,10 @@ Write-Host "Starting auto Git commit process..." -ForegroundColor Green
 Write-Host "Commit message: $Message" -ForegroundColor Cyan
 
 try {
+    # Get script directory and change to it
+    $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+    Set-Location $scriptDir
+    
     # Call Python script
     python auto_commit.py $Message
     
