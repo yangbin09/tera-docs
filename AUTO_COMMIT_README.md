@@ -23,12 +23,17 @@
 ### 方法1：使用PowerShell脚本（推荐）
 
 ```powershell
-# 使用自定义提交信息
+# 使用自定义提交信息 (可在任何目录执行)
+powershell -ExecutionPolicy Bypass -File "D:\code\tera\docs\commit.ps1" "Fix login bug"
+
+# 或在脚本目录下执行
 .\commit.ps1 "Fix login bug"
 
 # 使用默认提交信息（当前时间戳）
 .\commit.ps1
 ```
+
+**注意**: 如果在cmd命令行中，需要使用完整的PowerShell调用语法。
 
 ### 方法2：直接使用Python脚本
 
