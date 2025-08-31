@@ -14,13 +14,13 @@ hero:
       link: /docs/tools/
 
 features:
-  - title: 📝 丰富的指令分类
+  - title: "[📝 丰富的指令分类](/docs/categories/)"
     details: 按照不同应用场景分类整理，包含写作、分析、创意等多个领域的专业指令
-  - title: 🛠️ 实用工具集合
+  - title: "[🛠️ 实用工具集合](/docs/tools/)"
     details: 收录各类AI工具和开发工具，提供详细的使用说明和最佳实践
-  - title: 📚 技术文章分享
+  - title: "[📚 技术文章分享](/docs/articles/)"
     details: 深入的技术文章和随笔，分享AI应用的经验和思考
-  - title: 🔍 快速搜索
+  - title: "[📖 随笔文集](/docs/essays/)"
     details: 支持全文搜索，快速找到你需要的指令和工具
 ---
 
@@ -44,17 +44,17 @@ features:
 ### 🛠️ 工具集合
 
 #### 🤖 AI相关工具
-- [AI工具](/docs/tools/AI工具/) - Chrome MCP服务器、Ollama部署、Claude配置等AI工具
-- [AI工具综合指南](/docs/tools/AI工具/ai-tools-guide/) - 全面的AI工具使用说明和最佳实践
+- [AI工具](./tools/AI工具) - Chrome MCP服务器、Ollama部署、Claude配置等AI工具
+- [AI工具综合指南](./tools/AI工具/ai-tools-guide) - 全面的AI工具使用说明和最佳实践
 
 #### 💻 开发与文档
-- [开发工具](/docs/tools/开发工具/) - Dyad AI应用构建器等开发平台
-- [文档工具](/docs/tools/文档工具/) - MarkItDown转换工具、批量处理脚本
-- [服务器工具](/docs/tools/服务器工具/) - CentOS安装、Nginx配置等服务器管理工具
+- [开发工具](./tools/开发工具) - Dyad AI应用构建器等开发平台
+- [文档工具](./tools/文档工具) - MarkItDown转换工具、批量处理脚本
+- [服务器工具](./tools/服务器工具) - CentOS安装、Nginx配置等服务器管理工具
 
 ### 📖 文章内容
-- [技术文章](/docs/articles/) - 深入的技术分析和教程
-- [随笔文集](/docs/essays/) - 个人思考和经验分享
+- [技术文章](./articles) - 深入的技术分析和教程
+- [随笔文集](./essays) - 个人思考和经验分享
 
 ## 📖 使用说明
 
