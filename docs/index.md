@@ -8,19 +8,19 @@ hero:
   actions:
     - theme: brand
       text: 开始使用
-      link: /docs/categories/
+      link: ./categories/
     - theme: alt
       text: 查看工具
-      link: /docs/tools/
+      link: ./tools/
 
 features:
-  - title: "[📝 丰富的指令分类](/docs/categories/)"
+  - title: "[📝 丰富的指令分类](./categories/)"
     details: 按照不同应用场景分类整理，包含写作、分析、创意等多个领域的专业指令
-  - title: "[🛠️ 实用工具集合](/docs/tools/)"
+  - title: "[🛠️ 实用工具集合](./tools/)"
     details: 收录各类AI工具和开发工具，提供详细的使用说明和最佳实践
-  - title: "[📚 技术文章分享](/docs/articles/)"
+  - title: "[📚 技术文章分享](./articles/)"
     details: 深入的技术文章和随笔，分享AI应用的经验和思考
-  - title: "[📖 随笔文集](/docs/essays/)"
+  - title: "[📖 随笔文集](./essays/)"
     details: 支持全文搜索，快速找到你需要的指令和工具
 ---
 
@@ -29,17 +29,17 @@ features:
 ### 📋 指令分类
 
 #### 🎯 专业应用
-- [专业技能](/docs/categories/专业技能/) - 教案写作、公文写作、项目复盘等专业场景指令
-- [内容创作](/docs/categories/内容创作/) - AI写小说、散文创作、短视频脚本等创意写作指令
-- [媒体运营](/docs/categories/媒体运营/) - 头条文章、视频分析、评论回复等媒体运营指令
+- [专业技能](./categories/专业技能/) - 教案写作、公文写作、项目复盘等专业场景指令
+- [内容创作](./categories/内容创作/) - AI写小说、散文创作、短视频脚本等创意写作指令
+- [媒体运营](./categories/媒体运营/) - 头条文章、视频分析、评论回复等媒体运营指令
 
 #### 🚀 营销推广
-- [营销推广](/docs/categories/营销推广/) - 小红书爆款、广告文案、情感内容等营销类指令
+- [营销推广](./categories/营销推广/) - 小红书爆款、广告文案、情感内容等营销类指令
 - [品牌营销](./categories/品牌营销) - 个人IP文案等品牌建设指令
 
 #### 📚 学习教育
-- [教育学习](/docs/categories/教育学习/) - PPT制作、编程指南、记忆方法等学习辅助指令
-- [实用工具](/docs/categories/tools/) - 关键词组合、内容审核、文本格式化等工具类指令
+- [教育学习](./categories/教育学习/) - PPT制作、编程指南、记忆方法等学习辅助指令
+- [实用工具](./categories/tools/) - 关键词组合、内容审核、文本格式化等工具类指令
 
 ### 🛠️ 工具集合
 
