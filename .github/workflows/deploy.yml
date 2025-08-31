@@ -66,6 +66,14 @@ jobs:
               cp -r ${{ secrets.REMOTE_WEB_DIR }}/* ${{ secrets.REMOTE_BACKUP_DIR }}/$(date +%Y%m%d_%H%M%S)/ 2>/dev/null || true
             fi
       
+      - name: Debug SSH secrets
+        run: |
+          echo "SSH_HOSTNAME: '${{ secrets.SSH_HOSTNAME }}'"
+          echo "SSH_USERNAME: '${{ secrets.SSH_USERNAME }}'"
+          echo "SSH_PORT: '${{ secrets.SSH_PORT }}'"
+          echo "REMOTE_WEB_DIR: '${{ secrets.REMOTE_WEB_DIR }}'"
+          echo "REMOTE_BACKUP_DIR: '${{ secrets.REMOTE_BACKUP_DIR }}'"
+      
       - name: Copy files to server
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -76,14 +84,6 @@ jobs:
           source: "dist/*"
           target: ${{ secrets.REMOTE_WEB_DIR }}
           strip_components: 1
-      
-      - name: Debug SSH secrets
-        run: |
-          echo "SSH_HOSTNAME: '${{ secrets.SSH_HOSTNAME }}'"
-          echo "SSH_USERNAME: '${{ secrets.SSH_USERNAME }}'"
-          echo "SSH_PORT: '${{ secrets.SSH_PORT }}'"
-          echo "REMOTE_WEB_DIR: '${{ secrets.REMOTE_WEB_DIR }}'"
-          echo "REMOTE_BACKUP_DIR: '${{ secrets.REMOTE_BACKUP_DIR }}'"
       
       - name: Configure Nginx and restart services
         uses: appleboy/ssh-action@v1
