@@ -1,4 +1,4 @@
-name: Deploy VitePress site to Pages
+name: Deploy VitePress site to Remote Server
 
 on:
   # 在推送到 main 分支时触发
@@ -7,27 +7,24 @@ on:
   # 允许手动触发工作流
   workflow_dispatch:
 
-# 设置 GITHUB_TOKEN 的权限，允许部署到 Pages
+# 设置基本权限
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
-# 只允许一个并发部署，跳过正在运行和最新队列之间的运行队列
-# 但是，不要取消正在进行的运行，因为我们希望允许这些生产部署完成
+# 只允许一个并发部署
 concurrency:
-  group: pages
+  group: deploy-server
   cancel-in-progress: false
 
 jobs:
-  # 构建作业
-  build:
+  # 构建和部署作业
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
+          fetch-depth: 0
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -35,9 +32,6 @@ jobs:
           node-version: 18
           cache: npm
           registry-url: 'https://registry.npmmirror.com'
-      
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
       
       - name: Install dependencies
         run: |
@@ -52,20 +46,58 @@ jobs:
           npm run docs:build
           touch .vitepress/dist/.nojekyll
       
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Create backup on remote server
+        uses: appleboy/ssh-action@v1.0.3
         with:
-          path: .vitepress/dist
-
-  # 部署作业
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          host: ${{ secrets.SSH_HOSTNAME }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: ${{ secrets.SSH_PORT }}
+          timeout: 30s
+          script: |
+            # 创建备份目录
+            mkdir -p ${{ secrets.REMOTE_BACKUP_DIR }}/$(date +%Y%m%d_%H%M%S)
+            # 备份当前网站文件
+            if [ -d "${{ secrets.REMOTE_WEB_DIR }}" ]; then
+              cp -r ${{ secrets.REMOTE_WEB_DIR }}/* ${{ secrets.REMOTE_BACKUP_DIR }}/$(date +%Y%m%d_%H%M%S)/ 2>/dev/null || true
+            fi
+            # 清理旧备份（保留7天）
+            find ${{ secrets.REMOTE_BACKUP_DIR }} -type d -mtime +7 -exec rm -rf {} + 2>/dev/null || true
+      
+      - name: Deploy to remote server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOSTNAME }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: ${{ secrets.SSH_PORT }}
+          source: ".vitepress/dist/*"
+          target: ${{ secrets.REMOTE_WEB_DIR }}
+          strip_components: 2
+          overwrite: true
+      
+      - name: Configure Nginx and restart services
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOSTNAME }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: ${{ secrets.SSH_PORT }}
+          timeout: 30s
+          script: |
+            # 设置正确的文件权限
+            chown -R www-data:www-data ${{ secrets.REMOTE_WEB_DIR }}
+            chmod -R 755 ${{ secrets.REMOTE_WEB_DIR }}
+            
+            # 启用Gzip压缩（如果配置了）
+            if [ "${{ secrets.ENABLE_GZIP }}" = "true" ]; then
+              find ${{ secrets.REMOTE_WEB_DIR }} -name "*.html" -o -name "*.css" -o -name "*.js" | xargs gzip -k
+            fi
+            
+            # 重新加载Nginx配置
+            nginx -t && nginx -s reload
+            
+            # 输出部署状态
+            echo "部署完成时间: $(date)"
+            echo "部署目录: ${{ secrets.REMOTE_WEB_DIR }}"
+            echo "网站状态: $(curl -s -o /dev/null -w '%{http_code}' http://${{ secrets.SSH_HOSTNAME }})"
