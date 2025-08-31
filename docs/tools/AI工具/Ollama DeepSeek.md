@@ -181,7 +181,7 @@ pip install *.whl
 
 - [Ollama官方文档](https://ollama.ai/docs)
 - [DeepSeek模型介绍](https://deepseek.com)
-- [Ollama模型迁移教程](./ollama-model-migration-windows.md)
+- [Ollama模型迁移教程](./Ollama迁移.md)
 - Windows环境变量配置指南（待补充）
 
 ---

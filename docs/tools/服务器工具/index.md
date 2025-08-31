@@ -4,7 +4,7 @@
 
 ## 🖥️ 操作系统安装
 
-### [CentOS Stream 9安装指南](./centos-stream-9-installation-guide.md)
+### [CentOS Stream 9安装指南](./CentOS Stream 9安装指南.md)
 
 完整的CentOS Stream 9系统安装教程：
 
@@ -17,7 +17,7 @@
 
 ## 🌐 Web服务器
 
-### [Nginx基础知识详解](./nginx-basics-guide.md)
+### [Nginx基础知识详解](./Nginx基础指南.md)
 
 高性能Web服务器核心概念与实践：
 

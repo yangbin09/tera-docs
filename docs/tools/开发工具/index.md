@@ -4,7 +4,7 @@
 
 ## 🏗️ AI驱动的开发平台
 
-### [Dyad AI应用构建工具](./dyad-ai-app-builder.md)
+### [Dyad AI应用构建工具](./Dyad AI应用构建器.md)
 
 免费开源的本地AI应用构建平台，通过对话创建全栈应用：
 

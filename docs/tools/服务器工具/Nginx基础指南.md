@@ -159,8 +159,8 @@ http {
 
 - [Nginx 官方文档](https://nginx.org/en/docs/)
 - [Nginx 配置生成器](https://nginxconfig.io/)
-- [Ollama + DeepSeek部署](/tools/AI工具/Ollama%20DeepSeek) - 包含 Nginx 配置示例
-- [VitePress 部署指南](/tools/) - 实际的 Nginx 部署案例
+- [Ollama + DeepSeek部署](./../AI工具/Ollama DeepSeek.md) - 包含 Nginx 配置示例
+- [VitePress 部署指南](./..) - 实际的 Nginx 部署案例
 
 ---
 

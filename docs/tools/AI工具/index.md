@@ -4,7 +4,7 @@
 
 ## 🚀 浏览器AI自动化
 
-### [Chrome MCP Server](./chrome-mcp-server.md)
+### [Chrome MCP Server](./Chrome MCP服务器.md)
 基于Chrome扩展的模型上下文协议服务器，让AI接管你的浏览器：
 - 🚀 浏览器自动化操作
 - 🧠 智能内容分析和语义搜索
@@ -15,21 +15,21 @@
 
 ## 🧠 本地AI模型部署
 
-### [Ollama使用指南](./ollama-guide.md)
+### [Ollama使用指南](./Ollama指南.md)
 本地AI模型部署和使用的完整指南：
 - Windows系统安装配置
 - 2025年最新模型推荐（Qwen3、DeepSeek-R1系列）
 - 针对不同显卡的优化建议
 - 常见问题解决方案
 
-### [Ollama + DeepSeek部署](./ollama-deepseek.md)
+### [Ollama + DeepSeek部署](./Ollama DeepSeek.md)
 Windows下Ollama + DeepSeek-R1-1.5B完整部署指南：
 - 在线安装与离线部署方案
 - 模型目录迁移到D盘
 - 完整的部署检查清单
 - 实际使用方法和优化建议
 
-### [Ollama模型迁移](./ollama-migration.md)
+### [Ollama模型迁移](./Ollama迁移.md)
 Windows系统下Ollama模型缓存目录迁移教程：
 - 环境变量设置法（推荐）
 - 符号链接迁移法
@@ -38,13 +38,13 @@ Windows系统下Ollama模型缓存目录迁移教程：
 
 ## 🔧 AI工具配置
 
-### [Claude配置指南](./claude-config.md)
+### [Claude配置指南](./Claude配置.md)
 Claude AI助手的配置和使用指南：
 - 账号设置和API配置
 - 最佳实践和使用技巧
 - 常见问题解决方案
 
-### [AI工具综合指南](./ai-tools-guide/)
+### [AI工具综合指南](./ai-tools-guide)
 全面的AI工具使用指南，包含多种AI工具的详细说明和配置方法。
 
 ## 📊 工具对比

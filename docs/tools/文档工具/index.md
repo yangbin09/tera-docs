@@ -4,7 +4,7 @@
 
 ## 🔄 格式转换工具
 
-### [MarkItDown使用说明](./markitdown-guide.md)
+### [MarkItDown使用说明](./MarkItDown指南.md)
 
 微软开源的文档格式转换工具，支持多种格式转换为Markdown：
 
@@ -14,7 +14,7 @@
 - 🚀 高质量的转换效果
 - 💻 跨平台支持
 
-### [批量转换脚本](./batch-convert.md)
+### [批量转换脚本](./批量转换.md)
 
 Word文档批量转换为Markdown的自动化脚本：
 
