@@ -44,7 +44,7 @@ jobs:
       - name: Build with VitePress
         run: |
           npm run docs:build
-          New-Item -Path '.vitepress/dist/.nojekyll' -ItemType File -Force
+          touch .vitepress/dist/.nojekyll
       
       - name: Create backup on remote server
         uses: appleboy/ssh-action@v1.0.3
