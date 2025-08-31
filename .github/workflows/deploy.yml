@@ -95,6 +95,25 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           timeout: 30s
           script: |
+            # 验证必需的环境变量
+            if [ -z "${{ secrets.REMOTE_WEB_DIR }}" ] || [ -z "${{ secrets.REMOTE_BACKUP_DIR }}" ]; then
+              echo "错误: REMOTE_WEB_DIR 或 REMOTE_BACKUP_DIR 未配置"
+              exit 1
+            fi
+            
+            # 清理旧备份（仅保留1份）
+            if [ -d "${{ secrets.REMOTE_BACKUP_DIR }}" ]; then
+              rm -rf ${{ secrets.REMOTE_BACKUP_DIR }}/* 2>/dev/null || true
+            fi
+            
+            # 创建备份目录
+            mkdir -p ${{ secrets.REMOTE_BACKUP_DIR }}/$(date +%Y%m%d_%H%M%S)
+            
+            # 备份当前网站文件
+            if [ -d "${{ secrets.REMOTE_WEB_DIR }}" ]; then
+              cp -r ${{ secrets.REMOTE_WEB_DIR }}/* ${{ secrets.REMOTE_BACKUP_DIR }}/$(date +%Y%m%d_%H%M%S)/ 2>/dev/null || true
+            fi
+            
             # 设置正确的文件权限
             chown -R www-data:www-data ${{ secrets.REMOTE_WEB_DIR }}
             chmod -R 755 ${{ secrets.REMOTE_WEB_DIR }}
@@ -110,4 +129,5 @@ jobs:
             # 输出部署状态
             echo "部署完成时间: $(date)"
             echo "部署目录: ${{ secrets.REMOTE_WEB_DIR }}"
+            echo "备份目录: ${{ secrets.REMOTE_BACKUP_DIR }}"
             echo "网站状态: $(curl -s -o /dev/null -w '%{http_code}' http://${{ secrets.SSH_HOSTNAME }})"
