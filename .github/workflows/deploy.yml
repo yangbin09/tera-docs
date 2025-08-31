@@ -66,17 +66,16 @@ jobs:
               cp -r ${{ secrets.REMOTE_WEB_DIR }}/* ${{ secrets.REMOTE_BACKUP_DIR }}/$(date +%Y%m%d_%H%M%S)/ 2>/dev/null || true
             fi
       
-      - name: Deploy to remote server
+      - name: Copy files to server
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SSH_HOSTNAME }}
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT }}
-          source: ".vitepress/dist/*"
+          source: "dist/*"
           target: ${{ secrets.REMOTE_WEB_DIR }}
-          strip_components: 2
-          overwrite: true
+          strip_components: 1
       
       - name: Debug SSH secrets
         run: |
@@ -87,7 +86,7 @@ jobs:
           echo "REMOTE_BACKUP_DIR: '${{ secrets.REMOTE_BACKUP_DIR }}'"
       
       - name: Configure Nginx and restart services
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.SSH_HOSTNAME }}
           username: ${{ secrets.SSH_USERNAME }}
