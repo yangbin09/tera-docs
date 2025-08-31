@@ -44,7 +44,7 @@ jobs:
       - name: Build with VitePress
         run: |
           npm run docs:build
-          touch docs/.vitepress/dist/.nojekyll
+          New-Item -Path '.vitepress/dist/.nojekyll' -ItemType File -Force
       
       - name: Create backup on remote server
         uses: appleboy/ssh-action@v1.0.3
@@ -71,9 +71,9 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT }}
-          source: "docs/.vitepress/dist/*"
+          source: ".vitepress/dist/*"
           target: ${{ secrets.REMOTE_WEB_DIR }}
-          strip_components: 3
+          strip_components: 2
           overwrite: true
       
       - name: Configure Nginx and restart services
