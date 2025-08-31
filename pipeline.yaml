@@ -193,14 +193,28 @@ stages:
           - cd ../
           - '# 创建部署目录结构'
           - python3 -c "import os; os.makedirs('deploy_workspace', exist_ok=True)"
-          - '# 检查并复制构建产物'
+          - '# 检查并复制构建产物内容（避免目录层级嵌套）'
           - |
             python3 -c "
-            import shutil, os
-            src = 'docs/.vitepress/dist' if os.path.exists('docs/.vitepress/dist') else '.'
-            print(f'复制源路径: {src}')
-            if src != '.':
-                shutil.copytree(src, 'deploy_workspace/dist', dirs_exist_ok=True)
+            import shutil, os, glob
+            src_dir = 'docs/.vitepress/dist'
+            target_dir = 'deploy_workspace/dist'
+            
+            if os.path.exists(src_dir):
+                print(f'复制源路径: {src_dir}')
+                # 确保目标目录存在
+                os.makedirs(target_dir, exist_ok=True)
+                # 复制dist目录内的所有内容，而不是dist目录本身
+                for item in glob.glob(os.path.join(src_dir, '*')):
+                    item_name = os.path.basename(item)
+                    target_path = os.path.join(target_dir, item_name)
+                    if os.path.isdir(item):
+                        if os.path.exists(target_path):
+                            shutil.rmtree(target_path)
+                        shutil.copytree(item, target_path)
+                    else:
+                        shutil.copy2(item, target_path)
+                print(f'已复制dist目录内容到: {target_dir}')
             else:
                 print('未找到构建产物，跳过复制')
             "
