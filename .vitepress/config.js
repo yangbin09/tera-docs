@@ -43,6 +43,9 @@ export default defineConfig({
   title: 'AI写作指令集合',
   description: '包含各种AI写作指令和教程的文档集合，涵盖多种写作场景和应用',
   
+  // 设置源目录为docs
+  srcDir: 'docs',
+  
   // 忽略死链接检查
   ignoreDeadLinks: true,
   
@@ -84,7 +87,7 @@ export default defineConfig({
     // 侧边栏 - 使用自动化路径修复的 vitepress-sidebar
     sidebar: {
       // Categories 目录自动生成侧边栏
-      '/categories/': generateSidebarWithCorrectPaths('/categories/', 'categories', {
+      '/categories/': generateSidebarWithCorrectPaths('/categories/', 'docs/categories', {
         hyphenToSpace: true,
         underscoreToSpace: true,
         capitalizeFirst: true,
@@ -97,7 +100,7 @@ export default defineConfig({
       }),
       
       // Tools 目录自动生成侧边栏
-      '/tools/': generateSidebarWithCorrectPaths('/tools/', 'tools', {
+      '/tools/': generateSidebarWithCorrectPaths('/tools/', 'docs/tools', {
         hyphenToSpace: true,
         underscoreToSpace: true,
         capitalizeFirst: true,
@@ -110,7 +113,7 @@ export default defineConfig({
       }),
       
       // Essays 目录自动生成侧边栏
-      '/essays/': generateSidebarWithCorrectPaths('/essays/', 'essays', {
+      '/essays/': generateSidebarWithCorrectPaths('/essays/', 'docs/essays', {
         hyphenToSpace: true,
         underscoreToSpace: true,
         capitalizeFirst: true,
@@ -121,8 +124,8 @@ export default defineConfig({
         sortMenusOrderByDescending: false,
         frontmatterTitleFieldName: 'title'
       }),
-        // Tools 目录自动生成侧边栏
-      '/articles/': generateSidebarWithCorrectPaths('/articles/', 'articles', {
+        // Articles 目录自动生成侧边栏
+      '/articles/': generateSidebarWithCorrectPaths('/articles/', 'docs/articles', {
         hyphenToSpace: true,
         underscoreToSpace: true,
         capitalizeFirst: true,
