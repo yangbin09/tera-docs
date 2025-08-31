@@ -87,35 +87,41 @@ jobs:
       
       - name: Configure Nginx and restart services
         uses: appleboy/ssh-action@v1
+        env:
+          REMOTE_WEB_DIR: ${{ secrets.REMOTE_WEB_DIR }}
+          REMOTE_BACKUP_DIR: ${{ secrets.REMOTE_BACKUP_DIR }}
         with:
           host: ${{ secrets.SSH_HOSTNAME }}
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT }}
           timeout: 30s
+          envs: REMOTE_WEB_DIR,REMOTE_BACKUP_DIR
           script: |
             # 验证必需的环境变量
-            if [ -z "${{ secrets.REMOTE_WEB_DIR }}" ] || [ -z "${{ secrets.REMOTE_BACKUP_DIR }}" ]; then
+            if [ -z "$REMOTE_WEB_DIR" ] || [ -z "$REMOTE_BACKUP_DIR" ]; then
               echo "错误: REMOTE_WEB_DIR 或 REMOTE_BACKUP_DIR 未配置"
+              echo "REMOTE_WEB_DIR: '$REMOTE_WEB_DIR'"
+              echo "REMOTE_BACKUP_DIR: '$REMOTE_BACKUP_DIR'"
               exit 1
             fi
             
             # 清理旧备份（仅保留1份）
-            if [ -d "${{ secrets.REMOTE_BACKUP_DIR }}" ]; then
-              rm -rf ${{ secrets.REMOTE_BACKUP_DIR }}/* 2>/dev/null || true
+            if [ -d "$REMOTE_BACKUP_DIR" ]; then
+              rm -rf $REMOTE_BACKUP_DIR/* 2>/dev/null || true
             fi
             
             # 创建备份目录
-            mkdir -p ${{ secrets.REMOTE_BACKUP_DIR }}/$(date +%Y%m%d_%H%M%S)
+            mkdir -p $REMOTE_BACKUP_DIR/$(date +%Y%m%d_%H%M%S)
             
             # 备份当前网站文件
-            if [ -d "${{ secrets.REMOTE_WEB_DIR }}" ]; then
-              cp -r ${{ secrets.REMOTE_WEB_DIR }}/* ${{ secrets.REMOTE_BACKUP_DIR }}/$(date +%Y%m%d_%H%M%S)/ 2>/dev/null || true
+            if [ -d "$REMOTE_WEB_DIR" ]; then
+              cp -r $REMOTE_WEB_DIR/* $REMOTE_BACKUP_DIR/$(date +%Y%m%d_%H%M%S)/ 2>/dev/null || true
             fi
             
             # 设置正确的文件权限
-            chown -R www-data:www-data ${{ secrets.REMOTE_WEB_DIR }}
-            chmod -R 755 ${{ secrets.REMOTE_WEB_DIR }}
+            chown -R www-data:www-data $REMOTE_WEB_DIR
+            chmod -R 755 $REMOTE_WEB_DIR
             
             # 启用Gzip压缩（如果配置了）
             if [ "${{ secrets.ENABLE_GZIP }}" = "true" ]; then
