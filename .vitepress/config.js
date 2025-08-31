@@ -81,7 +81,7 @@ export default defineConfig({
       { text: '随笔文集', link: '/essays/' },
       { text: 'AI技术', link: '/tools/' },
       { text: '技术文章', link: '/articles/' },
-      { text: 'GitHub', link: 'https://github.com/your-username/ai-writing-prompts' }
+      { text: 'GitHub', link: 'https://github.com/yangbin09/tera-docs' }
     ],
 
     // 侧边栏 - 使用自动化路径修复的 vitepress-sidebar
@@ -161,7 +161,7 @@ export default defineConfig({
 
     // 社交链接
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/your-username/ai-writing-prompts' }
+      { icon: 'github', link: 'https://github.com/yangbin09/tera-docs' }
     ],
 
     // 页脚
@@ -172,7 +172,7 @@ export default defineConfig({
 
     // 编辑链接
     editLink: {
-      pattern: 'https://github.com/your-username/ai-writing-prompts/edit/main/docs/:path',
+      pattern: 'https://github.com/yangbin09/tera-docs/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页面'
     },
 
