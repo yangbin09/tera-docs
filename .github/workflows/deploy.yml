@@ -55,14 +55,16 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           timeout: 30s
           script: |
+            # 清理旧备份（仅保留1份）
+            if [ -d "${{ secrets.REMOTE_BACKUP_DIR }}" ]; then
+              rm -rf ${{ secrets.REMOTE_BACKUP_DIR }}/* 2>/dev/null || true
+            fi
             # 创建备份目录
             mkdir -p ${{ secrets.REMOTE_BACKUP_DIR }}/$(date +%Y%m%d_%H%M%S)
             # 备份当前网站文件
             if [ -d "${{ secrets.REMOTE_WEB_DIR }}" ]; then
               cp -r ${{ secrets.REMOTE_WEB_DIR }}/* ${{ secrets.REMOTE_BACKUP_DIR }}/$(date +%Y%m%d_%H%M%S)/ 2>/dev/null || true
             fi
-            # 清理旧备份（保留7天）
-            find ${{ secrets.REMOTE_BACKUP_DIR }} -type d -mtime +7 -exec rm -rf {} + 2>/dev/null || true
       
       - name: Deploy to remote server
         uses: appleboy/scp-action@v0.1.7
