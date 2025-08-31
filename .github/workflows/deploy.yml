@@ -78,6 +78,14 @@ jobs:
           strip_components: 2
           overwrite: true
       
+      - name: Debug SSH secrets
+        run: |
+          echo "SSH_HOSTNAME: '${{ secrets.SSH_HOSTNAME }}'"
+          echo "SSH_USERNAME: '${{ secrets.SSH_USERNAME }}'"
+          echo "SSH_PORT: '${{ secrets.SSH_PORT }}'"
+          echo "REMOTE_WEB_DIR: '${{ secrets.REMOTE_WEB_DIR }}'"
+          echo "REMOTE_BACKUP_DIR: '${{ secrets.REMOTE_BACKUP_DIR }}'"
+      
       - name: Configure Nginx and restart services
         uses: appleboy/ssh-action@v1.0.3
         with:
