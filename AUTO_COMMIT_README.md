@@ -24,7 +24,7 @@
 
 ```powershell
 # 使用自定义提交信息
-.\commit.ps1 "修复登录bug"
+.\commit.ps1 "Fix login bug"
 
 # 使用默认提交信息（当前时间戳）
 .\commit.ps1
