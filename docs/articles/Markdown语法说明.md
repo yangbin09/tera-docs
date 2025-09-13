@@ -89,33 +89,6 @@ Markdown
 3. 第三步：关上冰箱门
 ```
 
-### 4. 链接和图片 (Links & Images)
-
-#### 链接
-
-语法：`[链接显示的文字](链接地址)`
-
-**示例：**
-
-Markdown
-
-```
-欢迎访问 [Google](https://www.google.com) 搜索。
-```
-
-#### 图片
-
-语法与链接非常相似，只是在前面多一个感叹号 !。
-
-语法：![图片替代文字](图片地址)
-
-**示例：**
-
-Markdown
-
-```
-![Google Logo](https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)
-```
 
 ### 5. 引用 (Blockquotes)
 
