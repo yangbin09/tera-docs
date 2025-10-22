@@ -72,24 +72,66 @@ def commit_changes(commit_message):
     return success
 
 def push_to_remote():
-    """推送到远程仓库"""
+    """推送到远程仓库（HTTPS失败时自动回退到SSH）"""
     print("🚀 推送到远程仓库...")
     success, output = run_command('git -c http.proxy="" -c https.proxy="" push origin master')
-    
+
+    # 首次尝试失败，判断是否为网络连通问题
     if not success:
-        if "rejected" in output.lower():
+        lower = output.lower() if isinstance(output, str) else ""
+        net_errors = ("couldn't connect" in lower or
+                      "failed to connect" in lower or
+                      "timeout" in lower or
+                      "timed out" in lower or
+                      "ssl" in lower or
+                      "could not resolve host" in lower)
+        if net_errors:
+            print("🔁 检测到HTTPS网络不可用，尝试使用SSH方式推送...")
+
+            # 解析SSH远程地址（从origin推导）
+            def get_ssh_remote_url():
+                ok, remote = run_command('git config --get remote.origin.url', check=False)
+                if not ok:
+                    return None
+                remote = remote.strip()
+                if remote.startswith('git@github.com:'):
+                    return remote
+                if remote.startswith('https://github.com/') or remote.startswith('http://github.com/'):
+                    path = remote.split('github.com/')[-1]
+                    return f'git@github.com:{path}'
+                return None
+
+            ssh_url = get_ssh_remote_url()
+            if ssh_url:
+                print(f"🔐 使用SSH推送: {ssh_url}")
+                success, output2 = run_command(f'git push {ssh_url} master')
+                if success:
+                    print("✅ 成功推送到远程仓库")
+                    return True
+                else:
+                    print("❌ SSH推送失败")
+                    print(output2)
+                    return False
+            else:
+                print("⚠️ 未能解析SSH远程地址，推送失败")
+                return False
+
+        # 非网络问题，可能是被rejected
+        if "rejected" in lower:
             print("❌ 推送被拒绝，可能是远程有新的提交")
             print("🔄 尝试重新拉取并合并...")
-            
-            # 尝试拉取并重新推送
             if pull_latest_changes():
                 print("🚀 重新推送到远程仓库...")
                 success, _ = run_command('git -c http.proxy="" -c https.proxy="" push origin master')
                 if success:
                     print("✅ 成功推送到远程仓库")
                     return True
+            return False
+
+        # 其他失败情况
         return False
-    
+
+    # 首次推送成功
     print("✅ 成功推送到远程仓库")
     return True
 
