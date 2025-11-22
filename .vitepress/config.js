@@ -60,9 +60,7 @@ export default defineConfig({
         strict: false,
         allow: ['..', '../..']
       },
-      hmr: {
-        port: 5173
-      }
+      // 使用默认的 HMR 端口以避免端口占用导致的客户端错误
     },
     define: {
       __VUE_PROD_DEVTOOLS__: false
@@ -194,7 +192,10 @@ export default defineConfig({
     ['meta', { name: 'og:locale', content: 'zh-CN' }],
     ['meta', { name: 'og:title', content: 'AI写作指令集合' }],
     ['meta', { name: 'og:site_name', content: 'AI写作指令集合' }],
-    ['meta', { name: 'og:description', content: '包含各种AI写作指令和教程的文档集合，涵盖多种写作场景和应用' }]
+    ['meta', { name: 'og:description', content: '包含各种AI写作指令和教程的文档集合，涵盖多种写作场景和应用' }],
+    // 早期访问控制：在内容渲染前隐藏主体并跳转登录页
+    ['style', {}, 'html[data-auth="locked"] body{display:none!important;}'],
+    ['script', {}, `(()=>{try{const p=location.pathname;const isLogin=(p.endsWith('/login.html')||p==='/login.html'||p.endsWith('/login')||p==='/login');if(isLogin)return;const t=sessionStorage.getItem('site_auth');const e=Number(sessionStorage.getItem('site_auth_exp')||'0');const n=Date.now();if(!t||!e||n>e){document.documentElement.setAttribute('data-auth','locked');const r='/login.html?redirect='+encodeURIComponent(p+location.search+location.hash);location.replace(r);}}catch(_){}})();`]
   ],
 
   // 语言配置

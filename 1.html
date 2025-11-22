@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <!-- 页面元信息与关键样式 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>酸甜蔓越莓鸡肉炒菜 | 食谱</title>
+    <meta
+      name="description"
+      content="蔓越莓果冻与鸡肉、四季豆的酸甜快炒，家常且兼具外卖风格。"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link
+      rel="preconnect"
+      href="https://assets.bonappetit.com"
+      crossorigin
+    />
+    <style>
+      /* 基础排版与可读性 */
+      :root {
+        --max-w: 960px;
+        --space-1: 6px;
+        --space-2: 10px;
+        --space-3: 16px;
+        --space-4: 24px;
+        --radius: 12px;
+        --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC",
+          "Microsoft YaHei", Helvetica, Arial, sans-serif;
+        --bg: #ffffff;
+        --fg: #222222;
+        --muted: #666666;
+        --border: #e6e6e6;
+        --brand: #0f62fe;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #121212;
+          --fg: #e6e6e6;
+          --muted: #b3b3b3;
+          --border: #2a2a2a;
+        }
+      }
+      html {
+        font-size: 16px;
+      }
+      body {
+        margin: 0;
+        color: var(--fg);
+        background: var(--bg);
+        font-family: var(--font-body);
+        line-height: 1.75;
+      }
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: saturate(1.2) blur(6px);
+        background: color-mix(in oklab, var(--bg) 85%, transparent);
+        border-bottom: 1px solid var(--border);
+      }
+      .site-nav {
+        max-width: var(--max-w);
+        margin: 0 auto;
+        padding: var(--space-3);
+        display: flex;
+        gap: var(--space-3);
+        align-items: center;
+        justify-content: space-between;
+      }
+      .site-nav .links {
+        display: flex;
+        gap: var(--space-3);
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .site-nav a {
+        color: var(--fg);
+        text-decoration: none;
+        padding: 6px 8px;
+        border-radius: 8px;
+      }
+      .site-nav a:hover {
+        background: color-mix(in oklab, var(--border) 50%, transparent);
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        background: color-mix(in oklab, var(--bg) 92%, transparent);
+        color: var(--fg);
+        cursor: pointer;
+        text-decoration: none;
+        transition: transform 0.08s ease, background 0.2s ease;
+      }
+      .btn:hover { transform: translateY(-1px); }
+      .btn:active { transform: translateY(0); }
+      .btn-primary {
+        border-color: color-mix(in oklab, var(--brand) 40%, var(--border));
+        background: color-mix(in oklab, var(--brand) 12%, var(--bg));
+        color: var(--fg);
+      }
+      .container {
+        max-width: var(--max-w);
+        margin: 0 auto;
+        padding: var(--space-4) var(--space-3);
+      }
+      .lead {
+        color: var(--muted);
+        margin-top: var(--space-2);
+        margin-bottom: var(--space-4);
+      }
+      h1 {
+        font-size: clamp(1.8rem, 2.4vw + 1rem, 2.6rem);
+        line-height: 1.25;
+        margin: 0;
+      }
+      h2 {
+        font-size: clamp(1.2rem, 1.2vw + 1rem, 1.6rem);
+        line-height: 1.35;
+        margin: var(--space-3) 0 var(--space-2);
+      }
+      p, ul, ol { margin: 0 0 var(--space-3); }
+      ul, ol { padding-left: 1.25rem; }
+      li { margin-bottom: 6px; }
+
+      /* 图片与版面布局 */
+      .hero {
+        margin: 0 0 var(--space-4);
+      }
+      .hero img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--radius);
+        display: block;
+        box-shadow: 0 3px 16px color-mix(in oklab, var(--border) 60%, transparent);
+      }
+      .hero figcaption {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-top: var(--space-2);
+      }
+
+      .recipe-sections {
+        display: grid;
+        gap: var(--space-4);
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 768px) {
+        .recipe-sections { grid-template-columns: 1fr 1fr; }
+      }
+      .actions { display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-3); }
+
+      .site-footer {
+        border-top: 1px solid var(--border);
+        margin-top: var(--space-4);
+      }
+      .site-footer .container { padding-top: var(--space-3); padding-bottom: var(--space-3); }
+
+      /* 跳转链接可访问性 */
+      .skip-link {
+        position: absolute;
+        left: -999px;
+        top: -999px;
+      }
+      .skip-link:focus {
+        left: var(--space-3);
+        top: var(--space-3);
+        background: var(--bg);
+        color: var(--fg);
+        border: 1px solid var(--border);
+        padding: 8px 10px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+
+    <!-- 主导航：锚点 + 关键操作按钮 -->
+    <header class="site-header">
+      <nav class="site-nav" aria-label="主导航">
+        <div class="links">
+          <a href="#ingredients">配料</a>
+          <a href="#steps">步骤</a>
+        </div>
+        <button type="button" class="btn" aria-label="打印此食谱" onclick="window.print()">打印</button>
+      </nav>
+    </header>
+
+    <!-- 食谱主体内容：标题、导语、图片、配料与步骤 -->
+    <main id="main" class="container">
+      <article class="recipe" itemscope itemtype="https://schema.org/Recipe" aria-labelledby="recipe-title">
+        <header>
+          <h1 id="recipe-title" itemprop="name">酸甜蔓越莓鸡肉炒菜</h1>
+          <p class="lead" itemprop="description">
+            罐装蔓越莓果冻变成闪亮的炒菜酱汁，裹住鸡肉和四季豆，这道菜让人想起你最喜欢的外卖。
+          </p>
+        </header>
+
+        <figure class="hero">
+          <img
+            src="https://assets.bonappetit.com/photos/68e41b8f5bb19e4eab1a52e9/master/pass/1125_WKNT_SS_04_WKNT_Sweet%20and%20Sour%20Cranberry%20Chicken_022_FINAL.jpg"
+            alt="成品：酸甜蔓越莓鸡肉炒菜，鸡肉与四季豆裹上亮泽酱汁"
+            loading="lazy"
+            decoding="async"
+            fetchpriority="low"
+          />
+          <figcaption>图片来源：Bon Appétit</figcaption>
+        </figure>
+
+        <div class="recipe-sections">
+          <section id="ingredients" aria-labelledby="ingredients-title" itemprop="recipeIngredient">
+            <h2 id="ingredients-title">配料</h2>
+            <ul>
+              <li>1杯 罐装蔓越莓果冻（来自14盎司罐）</li>
+              <li>3汤匙 未调味的米醋</li>
+              <li>2茶匙 细磨橙皮</li>
+              <li>1/4杯 新鲜橙汁</li>
+              <li>2茶匙 烤芝麻油</li>
+              <li>3汤匙 酱油，分开使用</li>
+              <li>1磅 无皮无骨鸡胸肉，横向对半切开，逆纹切薄片</li>
+              <li>1汤匙 玉米淀粉</li>
+              <li>4汤匙（或更多）植物油，分开使用</li>
+              <li>1磅 四季豆，去头尾</li>
+              <li>6瓣 大蒜，切碎</li>
+              <li>1个 1.5英寸生姜，去皮切碎</li>
+              <li>适量 粗盐</li>
+              <li>适量 薄切橙皮和烤芝麻（装饰用）</li>
+              <li>适量 蒸白米饭（可选，配餐用）</li>
+            </ul>
+          </section>
+
+          <section id="steps" aria-labelledby="steps-title" itemprop="recipeInstructions">
+            <h2 id="steps-title">步骤</h2>
+            <ol>
+              <li>在小碗中搅拌蔓越莓果冻、米醋、橙皮、橙汁、芝麻油和2汤匙酱油，直到果冻大部分溶解，备用酱汁。</li>
+              <li>在中碗中将鸡肉片、玉米淀粉和剩余的1汤匙酱油拌匀，直到鸡肉均匀裹上酱料，备用。</li>
+              <li>在大平底锅中高火加热2汤匙植物油，煎炒四季豆约6–8分钟至变软并出现深色斑点，用夹子取出放入大碗。</li>
+              <li>在同一锅中加热剩余的2汤匙植物油，将鸡肉单层铺开煎炒约5分钟至金黄色熟透，转移到四季豆碗中。</li>
+              <li>如果锅干，可再加最多2汤匙植物油，加入大蒜和生姜炒香约1分钟，加入备用的酱汁煮约1分钟至稍微浓稠，放回四季豆和鸡肉拌匀。</li>
+              <li>从火上移开，用粗盐调味，撒上橙皮和芝麻装饰，可搭配蒸白米饭食用。</li>
+            </ol>
+            <div class="actions">
+              <a class="btn btn-primary" href="#steps" aria-label="跳到步骤开始">开始烹饪</a>
+              <button type="button" class="btn" aria-label="打印此食谱" onclick="window.print()">打印食谱</button>
+            </div>
+          </section>
+        </div>
+      </article>
+    </main>
+
+    <!-- 页脚：返回顶部 -->
+    <footer class="site-footer">
+      <div class="container">
+        <a href="#recipe-title" class="btn" aria-label="返回页面顶部">返回顶部</a>
+      </div>
+    </footer>
+  </body>
+</html>
