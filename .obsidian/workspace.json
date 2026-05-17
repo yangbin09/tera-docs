@@ -11,10 +11,12 @@
             "id": "f7887d2fe381a2f3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
+              "type": "image",
+              "state": {
+                "file": "docs/articles/从0到1搭建一个自动化博客/阿里云/image/Pasted image 20250913103043.png"
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20250913103043"
             }
           }
         ]
@@ -90,6 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "docs/articles/从0到1搭建一个自动化博客/阿里云/image/Pasted image 20250913103043.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +102,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "Pasted image 20250913103043 的反向链接列表"
             }
           },
           {
@@ -108,11 +111,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "docs/articles/从0到1搭建一个自动化博客/阿里云/image/Pasted image 20250913103043.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "出链"
+              "title": "Pasted image 20250913103043 的出链列表"
             }
           },
           {
@@ -150,12 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "docs/articles/从0到1搭建一个自动化博客/阿里云/image/Pasted image 20250913103043.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "Pasted image 20250913103043 的大纲"
             }
           }
         ]
@@ -179,6 +184,11 @@
   },
   "active": "f7887d2fe381a2f3",
   "lastOpenFiles": [
+    "public/logo.svg",
+    "docs/index.md",
+    "图片地址.md",
+    "docs/login.md",
+    "docs/articles/Obsidian 配置 `Obsidian-GitHub-Sync.md",
     "未命名.base"
   ]
 }
