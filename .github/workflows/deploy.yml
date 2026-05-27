@@ -142,7 +142,13 @@ jobs:
             mv "$upload_dir" "$REMOTE_WEB_DIR"
             find "$REMOTE_BACKUP_DIR" -mindepth 1 -maxdepth 1 -type d | sort -r | tail -n +4 | xargs -r rm -rf
 
-            chown -R www-data:www-data "$REMOTE_WEB_DIR"
+            if id -u www-data >/dev/null 2>&1; then
+              chown -R www-data:www-data "$REMOTE_WEB_DIR"
+            elif id -u nginx >/dev/null 2>&1; then
+              chown -R nginx:nginx "$REMOTE_WEB_DIR"
+            else
+              echo "No known web server user found; skipping chown"
+            fi
             chmod -R 755 "$REMOTE_WEB_DIR"
 
             if [ "$ENABLE_GZIP" = "true" ]; then
