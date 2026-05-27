@@ -1,3 +1,12 @@
-```bash
-powershell -ExecutionPolicy Bypass -File "D:\code\tera\docs\commit.ps1"
-```
+---
+title: 页面已移动
+sidebarExclude: true
+---
+
+<script setup>
+if (typeof window !== 'undefined') {
+  window.location.replace('/articles/automated-blog/git')
+}
+</script>
+
+页面已移动到：<a href="/articles/automated-blog/git">git仓库提交命令</a>

@@ -94,7 +94,10 @@ export default defineConfig({
         collapseDepth: 2,
         sortMenusByName: true,
         sortMenusOrderByDescending: false,
-        frontmatterTitleFieldName: 'title'
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
       }),
       
       // Tools 目录自动生成侧边栏
@@ -132,7 +135,10 @@ export default defineConfig({
         collapseDepth: 2,
         sortMenusByName: true,
         sortMenusOrderByDescending: false,
-        frontmatterTitleFieldName: 'title'
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
       })
     },
 
