@@ -198,7 +198,8 @@ export default defineConfig({
     ['meta', { name: 'og:locale', content: 'zh-CN' }],
     ['meta', { name: 'og:title', content: 'AI写作指令集合' }],
     ['meta', { name: 'og:site_name', content: 'AI写作指令集合' }],
-    ['meta', { name: 'og:description', content: '包含各种AI写作指令和教程的文档集合，涵盖多种写作场景和应用' }]
+    ['meta', { name: 'og:description', content: '包含各种AI写作指令和教程的文档集合，涵盖多种写作场景和应用' }],
+    ['script', {}, `(()=>{const{pathname:p,search:s,hash:h}=location;if(p==='/login.html'||p==='/login'){const r=new URLSearchParams(s).get('redirect')||'/';location.replace(r);return}const last=p.split('/').pop();if(!p.endsWith('/')&&last&&!last.includes('.'))location.replace(p+'.html'+s+h)})()`]
   ],
 
   // 语言配置
