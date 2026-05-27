@@ -116,6 +116,7 @@ export default defineConfig({
       { text: '指令分类', link: '/categories/' },
       { text: '随笔文集', link: '/essays/' },
       { text: 'AI技术', link: '/tools/' },
+      { text: 'Git 工作流', link: '/articles/git-workflow/' },
       { text: '技术文章', link: '/articles/' },
       { text: 'GitHub', link: 'https://github.com/yangbin09/tera-docs' }
     ],
@@ -165,6 +166,22 @@ export default defineConfig({
       }),
         // Articles 目录自动生成侧边栏
       '/articles/': generateSidebarWithCorrectPaths('/articles/', 'docs/articles', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 2,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      // Git 工作流目录自动生成侧边栏
+      '/articles/git-workflow/': generateSidebarWithCorrectPaths('/articles/git-workflow/', 'docs/articles/git-workflow', {
         hyphenToSpace: true,
         underscoreToSpace: true,
         capitalizeFirst: true,
