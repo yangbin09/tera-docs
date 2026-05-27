@@ -1,7 +1,12 @@
 ---
-title: git仓库提交命令
+title: 页面已迁移
+sidebarExclude: true
 ---
 
-```bash
-powershell -ExecutionPolicy Bypass -File "D:\code\tera\docs\commit.ps1"
-```
+<script setup>
+if (typeof window !== 'undefined') {
+  window.location.replace('/articles/git-workflow/01-github-ssh-setup')
+}
+</script>
+
+此目录已迁移到 [Git 工作流](/articles/git-workflow/01-github-ssh-setup)
