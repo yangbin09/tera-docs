@@ -239,6 +239,6 @@ title: 04 DeepSeek(AI问答工作流)
         
     - 你会看到 `语文导师回复.html` 文件。点击 **"Download" (下载)** 按钮！
     
-![](images/Pasted_image_20251022211225.png)
+![](./images/Pasted_image_20251022211225.webp)
 
 恭喜！你已经从零开始，完整复刻了这个功能强大、人设专业的 AI 聊天机器人工作流。

@@ -10,7 +10,7 @@
 
 <https://www.doubao.com/chat/?channel=baidu_pz&source=db_baidu_pz_01&keywordid=weizhi7>
 
-![豆包首页](./images/image_001.png)
+![豆包首页](./images/image_001.webp)
 
 ### 使用步骤
 

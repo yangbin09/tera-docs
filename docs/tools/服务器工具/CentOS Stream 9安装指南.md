@@ -121,11 +121,11 @@
 
 1. **语言选择**：建议选择中文简体
 
-![语言选择](./../../images/centos-installation/330e85d91c6a18736138b2cb5aa13c2a.png)
+![语言选择](../../images/centos-installation/330e85d91c6a18736138b2cb5aa13c2a.webp)
 
 2. **网络和主机名配置**
 
-![网络配置入口](./../../images/centos-installation/6eb49f54a3550c335c12c869e48ab43b.png)
+![网络配置入口](../../images/centos-installation/6eb49f54a3550c335c12c869e48ab43b.webp)
 
 3. **启用网络连接**
 
@@ -155,7 +155,7 @@
 
 1. **安装位置设置**
 
-![安装位置](./../../images/centos-installation/7b5ef5df10464f1c2caeca66cd8f98a2.png)
+![安装位置](../../images/centos-installation/7b5ef5df10464f1c2caeca66cd8f98a2.webp)
 
 2. **选择自动分区**（推荐新手使用）
 
@@ -163,23 +163,23 @@
 
 3. **完成分区配置**
 
-![分区完成](./../../images/centos-installation/5204725739fc6b08aeb91fdf518e8858.png)
+![分区完成](../../images/centos-installation/5204725739fc6b08aeb91fdf518e8858.webp)
 
 ### 第八步：时间和日期设置
 
 1. **修改时区设置**
 
-![时间设置](./../../images/centos-installation/1b47df2a7504445ac88f7269623bfd7c.png)
+![时间设置](../../images/centos-installation/1b47df2a7504445ac88f7269623bfd7c.webp)
 
 2. **选择亚洲/上海时区**
 
-![时区选择](./../../images/centos-installation/79be03c0fdab979d441e999673b0743d.png)
+![时区选择](../../images/centos-installation/79be03c0fdab979d441e999673b0743d.webp)
 
 ### 第九步：用户配置
 
 1. **设置Root密码**
 
-![Root密码设置](./../../images/centos-installation/0ffff4dd59764cdcfa70f0807b424a3f.png)
+![Root密码设置](../../images/centos-installation/0ffff4dd59764cdcfa70f0807b424a3f.webp)
 
 ![Root密码输入](./../../images/centos-installation/3bd7e0230c99dcebb9159bddf0ec850a.png)
 
@@ -187,9 +187,9 @@
 
 1. **选择安装类型**：服务器建议选择"最小安装"
 
-![软件选择](./../../images/centos-installation/950782e6a75dbe45b1d146d0d686321c.png)
+![软件选择](../../images/centos-installation/950782e6a75dbe45b1d146d0d686321c.webp)
 
-![最小安装](./../../images/centos-installation/17e49fd18cf9b631e33d416dfeb83abd.png)
+![最小安装](../../images/centos-installation/17e49fd18cf9b631e33d416dfeb83abd.webp)
 
 > 💡 **建议**: 对于服务器用途，选择最小安装可以减少系统资源占用和安全风险
 
@@ -197,7 +197,7 @@
 
 1. **开始安装系统**
 
-![开始安装](./../../images/centos-installation/3624a6676a9101a0a371de701e03951d.png)
+![开始安装](../../images/centos-installation/3624a6676a9101a0a371de701e03951d.webp)
 
 2. **等待安装完成**
 

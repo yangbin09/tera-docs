@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">AI写作指令集合</title>
+  <desc id="desc">AI写作指令、技术文章和工具教程文档集合。</desc>
+  <rect width="1200" height="630" fill="#f7f7f3"/>
+  <rect x="70" y="70" width="1060" height="490" rx="28" fill="#ffffff" stroke="#d9ded3" stroke-width="2"/>
+  <circle cx="150" cy="150" r="34" fill="#2563eb"/>
+  <path d="M137 151h26M150 138v26" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>
+  <text x="130" y="265" fill="#172033" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="76" font-weight="700">AI写作指令集合</text>
+  <text x="130" y="350" fill="#384257" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="34">写作指令 · 技术文章 · 工具教程</text>
+  <text x="130" y="430" fill="#5f6b7a" font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="28">wynlx.cn</text>
+  <g fill="none" stroke="#2563eb" stroke-width="8" stroke-linecap="round">
+    <path d="M860 190h135"/>
+    <path d="M860 245h205"/>
+    <path d="M860 300h160"/>
+    <path d="M860 355h220"/>
+  </g>
+</svg>

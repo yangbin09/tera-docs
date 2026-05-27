@@ -1,6 +1,7 @@
 ---
-title: Git 工作流
+title: 页面已移动
 sidebarExclude: true
+search: false
 ---
 
 <script setup>
@@ -10,4 +11,3 @@ if (typeof window !== 'undefined') {
 </script>
 
 此目录已迁移到 [Git 工作流](/articles/git-workflow/)
-

@@ -23,7 +23,7 @@ title: 小红书自动发布（Windows 环境）完整指南
 1. 在 Windows 搜索框输入 `CMD`。
 2. 选择“以管理员身份运行”。
 
-![打开命令行](./images/cmd-open.png)
+![打开命令行](./images/cmd-open.webp)
 
 ### 2) 安装 Go
 
@@ -48,7 +48,7 @@ winget install OpenJS.NodeJS.LTS
 1. 前往 Releases：<https://github.com/xpzouying/xiaohongshu-mcp/releases>
 2. 选择 Windows 构建包 `xiaohongshu-mcp-windows-amd64.zip`。
 
-![选择 Windows 构建包](./images/release-page.png)
+![选择 Windows 构建包](./images/release-page.webp)
 
 3. 下载完成后解压到本地目录。
 
@@ -111,7 +111,7 @@ C:\Users\你的用户名\AppData\Local\Temp\leakless-amd64-adb80298fa6a3af7ced8b
 ```
 
 ![登录程序输出](./images/login-exe-run.png)
-![登录界面示例](./images/login-ui.png)
+![登录界面示例](./images/login-ui.webp)
 
 2. 启动 MCP 服务：
 

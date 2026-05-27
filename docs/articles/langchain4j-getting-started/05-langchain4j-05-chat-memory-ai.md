@@ -33,7 +33,7 @@ title: LangChain4j 学习笔记 05：添加 Chat Memory，让 AI 记住上下文
 有了 Chat Memory，它就可以根据当前会话上下文回答。
 
 ---
-![Chat Memory 效果](images/05-01-chatmemory-result.png)
+![Chat Memory 效果](./images/05-01-chatmemory-result.webp)
 
 ## 一、这一章做了什么
 

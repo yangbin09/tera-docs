@@ -1,6 +1,26 @@
 import { defineConfig } from 'vitepress'
 import { generateSidebar } from 'vitepress-sidebar'
 
+const siteUrl = 'http://wynlx.cn'
+const legacySitemapPaths = [
+  '/articles/automated-blog/',
+  '/articles/从0到1搭建一个自动化博客/',
+  '/articles/从0到1搭建一个n8n工作流/',
+  '/articles/从0到1学习LangChain4j/',
+  '/articles/小红书/',
+  '/articles/服务器/',
+  '/articles/绘画提示词/',
+  '/articles/U盘环境/',
+  '/articles/Java编程指南',
+  '/articles/Markdown语法说明',
+  '/articles/Obsidian 配置 `Obsidian-GitHub-Sync'
+]
+
+function isLegacySitemapPath(url) {
+  const pathname = decodeURI(new URL(url, siteUrl).pathname)
+  return legacySitemapPaths.some((path) => pathname.startsWith(path))
+}
+
 // 自动化侧边栏路径修复函数
 function generateSidebarWithCorrectPaths(routePrefix, scanStartPath, options = {}) {
   // 生成原始侧边栏
@@ -39,6 +59,17 @@ function generateSidebarWithCorrectPaths(routePrefix, scanStartPath, options = {
   return fixPaths(originalSidebar, finalPrefix)
 }
 
+function renderSearchContent(src, env, md) {
+  const frontmatter = src.match(/^---[\s\S]*?---/)?.[0] || ''
+  const headings = src
+    .split('\n')
+    .filter((line) => /^#{1,6}\s+/.test(line))
+    .join('\n')
+
+  const html = md.render(`${frontmatter}\n\n${headings}`, env)
+  return env.frontmatter?.search === false || env.frontmatter?.sidebarExclude ? '' : html
+}
+
 export default defineConfig({
   title: 'AI写作指令集合',
   description: '包含各种AI写作指令和教程的文档集合，涵盖多种写作场景和应用',
@@ -48,6 +79,13 @@ export default defineConfig({
   
   // 忽略死链接检查
   ignoreDeadLinks: true,
+
+  sitemap: {
+    hostname: siteUrl,
+    transformItems(items) {
+      return items.filter((item) => !isLegacySitemapPath(item.url))
+    }
+  },
   
   // 服务器配置
   vite: {
@@ -146,6 +184,13 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
+        _render: renderSearchContent,
+        detailedView: false,
+        miniSearch: {
+          options: {
+            fields: ['title', 'titles']
+          }
+        },
         translations: {
           button: {
             buttonText: '搜索文档',
@@ -194,11 +239,17 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#3c82f6' }],
-    ['meta', { name: 'og:type', content: 'website' }],
-    ['meta', { name: 'og:locale', content: 'zh-CN' }],
-    ['meta', { name: 'og:title', content: 'AI写作指令集合' }],
-    ['meta', { name: 'og:site_name', content: 'AI写作指令集合' }],
-    ['meta', { name: 'og:description', content: '包含各种AI写作指令和教程的文档集合，涵盖多种写作场景和应用' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:locale', content: 'zh-CN' }],
+    ['meta', { property: 'og:title', content: 'AI写作指令集合' }],
+    ['meta', { property: 'og:site_name', content: 'AI写作指令集合' }],
+    ['meta', { property: 'og:description', content: '包含各种AI写作指令和教程的文档集合，涵盖多种写作场景和应用' }],
+    ['meta', { property: 'og:url', content: siteUrl }],
+    ['meta', { property: 'og:image', content: `${siteUrl}/og-image.png` }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: 'AI写作指令集合' }],
+    ['meta', { name: 'twitter:description', content: '包含各种AI写作指令和教程的文档集合，涵盖多种写作场景和应用' }],
+    ['meta', { name: 'twitter:image', content: `${siteUrl}/og-image.png` }],
     ['script', {}, `(()=>{const{pathname:p,search:s,hash:h}=location;if(p==='/login.html'||p==='/login'){const r=new URLSearchParams(s).get('redirect')||'/';location.replace(r);return}const last=p.split('/').pop();if(!p.endsWith('/')&&last&&!last.includes('.'))location.replace(p+'.html'+s+h)})()`]
   ],
 

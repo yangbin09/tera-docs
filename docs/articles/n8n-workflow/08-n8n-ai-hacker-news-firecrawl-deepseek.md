@@ -380,7 +380,7 @@ title: n8n 深度教程：从零构建 AI 驱动的 Hacker News 新闻简报（F
         
     - (注意：此节点的输出默认放在 `data` 字段中。)
         
-![](./images/Pasted_image_20251023221728.png)
+![](./images/Pasted_image_20251023221728.webp)
 ### 节点 9：Send email (发送邮件)
 
 - **节点类型**: `n8n-nodes-base.emailSend`

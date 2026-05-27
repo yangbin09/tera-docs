@@ -47,7 +47,7 @@ POST http://localhost:8080/study-plan/generate
 接口会返回一个结构化对象，里面包含当天主题、任务清单、产出物和验收标准。
 
 ---
-![在这里插入图片描述](images/01-01.png)
+![在这里插入图片描述](./images/01-01.webp)
 
 ## 二、添加 Lombok 依赖
 

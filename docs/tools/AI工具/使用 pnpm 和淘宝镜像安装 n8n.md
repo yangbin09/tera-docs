@@ -30,7 +30,7 @@
     - 下载 "LTS" (长期支持) 版本的 Windows 安装程序 (`.msi` 文件)。
         
     - （例如 `20.x.x LTS` 版本）
-        ![](image/f88d17bcec3e6665d90dc70be13f8a24%201.png)
+        ![](./image/f88d17bcec3e6665d90dc70be13f8a24%201.webp)
 1. **安装 Node.js**
     
     - 双击运行你下载的 `.msi` 文件。

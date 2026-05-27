@@ -18,7 +18,7 @@ title: LangChain4j 学习笔记 04：添加 Tool Calling，让 AI 能调用 Java
 现在我们可以给它工具，让它在需要真实数据时调用 Java 代码。
 
 ---
-![Tool Calling 流程图](images/01-tool-calling-overview.png)
+![Tool Calling 流程图](./images/01-tool-calling-overview.webp)
 
 ## 一、这一章做了什么
 
