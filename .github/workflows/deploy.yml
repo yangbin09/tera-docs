@@ -155,7 +155,25 @@ jobs:
               find "$REMOTE_WEB_DIR" -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" \) -exec gzip -kf {} \;
             fi
 
-            nginx -t
-            nginx -s reload
+            nginx_bin=""
+            for candidate in \
+              "$(command -v nginx 2>/dev/null || true)" \
+              "$(command -v openresty 2>/dev/null || true)" \
+              /usr/sbin/nginx \
+              /usr/local/nginx/sbin/nginx \
+              /usr/local/openresty/nginx/sbin/nginx \
+              /www/server/nginx/sbin/nginx; do
+              if [ -n "$candidate" ] && [ -x "$candidate" ]; then
+                nginx_bin="$candidate"
+                break
+              fi
+            done
+
+            if [ -n "$nginx_bin" ]; then
+              "$nginx_bin" -t
+              "$nginx_bin" -s reload
+            else
+              echo "No nginx/openresty executable found; skipping reload"
+            fi
 
             echo "Deployment finished at: $(date)"
