@@ -1,6 +1,7 @@
 ---
 
 title: Nano Banana Pro新出20种邪修玩法，做手办已经落后N个版本了
+sidebarTitle: Nano Banana Pro 邪修玩法
 ---
 
 # Nano Banana Pro新出20种邪修玩法，做手办已经落后N个版本了

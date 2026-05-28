@@ -1,5 +1,6 @@
 ---
 title: 01. Nano Banana Pro完全上手指南：从文本到创世神作
+sidebarTitle: 01 文生图上手
 ---
 
 # 01. Nano Banana Pro完全上手指南：从文本到创世神作

@@ -1,5 +1,6 @@
 ---
 title: 06 获取 FireCrawlAPI密钥
+sidebarTitle: 06 FireCrawl API
 ---
 
 

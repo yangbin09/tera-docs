@@ -1,5 +1,6 @@
 ---
 title: GitHub SSH 密钥配置指南（Windows 版）
+sidebarTitle: GitHub SSH 配置
 ---
 
 # GitHub SSH 密钥配置指南（Windows 版）

@@ -1,5 +1,6 @@
 ---
 title: 07 在n8n配置 Firecrawl 社区节点
+sidebarTitle: 07 Firecrawl 节点
 ---
 
 ﻿## 教程：在 n8n 中安装和配置 Firecrawl 社区节点

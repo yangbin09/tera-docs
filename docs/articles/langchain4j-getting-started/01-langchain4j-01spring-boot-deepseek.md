@@ -1,5 +1,6 @@
 ---
 title: LangChain4j 学习笔记 01：Spring Boot 接入 DeepSeek，先跑通一个聊天接口
+sidebarTitle: 01 接入 DeepSeek
 ---
 
 # LangChain4j 学习笔记 01：Spring Boot 接入 DeepSeek，先跑通一个聊天接口
