@@ -81,8 +81,10 @@ function fixSidebarPaths(items, resolvePath, scanStartPath) {
   return items.map((item) => {
     const next = { ...item }
     if (next.link) {
+      const originalLink = next.link  // 保存原始 link
       next.link = normalizeSidebarLink(next.link, resolvePath)
-      const filePath = scanStartPath + '/' + next.link + '.md'
+      // 用原始 link 拼接 filePath，避免 resolvePath 前缀导致路径重复
+      const filePath = scanStartPath + '/' + originalLink + '.md'
       const fm = getFrontmatter(filePath)
       if (fm.sidebarTitle) {
         next.text = fm.sidebarTitle
@@ -151,7 +153,6 @@ export default withMermaid(defineConfig({
       { text: '指令分类', link: '/categories/' },
       { text: '随笔文集', link: '/essays/' },
       { text: 'AI技术', link: '/tools/' },
-      { text: 'Git 工作流', link: '/articles/git-workflow/' },
       { text: '技术文章', link: '/articles/' },
       { text: 'GitHub', link: 'https://github.com/yangbin09/tera-docs' }
     ],
