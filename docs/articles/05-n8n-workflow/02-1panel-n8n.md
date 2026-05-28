@@ -2,6 +2,11 @@
 title: 02 1Panel网页安装n8n
 sidebarTitle: 02 1Panel
 ---
+# 02 1Panel网页安装n8n
+
+
+
+## 介绍
 
 
 与使用 `npm` 或 `pnpm` 在命令行中安装不同，使用 1Panel 这样的服务器管理面板，可以让你像安装手机 APP 一样，一键部署 n8n。整个过程都在图形化界面中完成，无需配置复杂环境。

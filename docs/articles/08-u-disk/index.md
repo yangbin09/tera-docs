@@ -1,5 +1,5 @@
 ---
-title: U盘环境
+title: 08 U盘环境
 sidebarTitle: 08 U盘环境
 ---
 
