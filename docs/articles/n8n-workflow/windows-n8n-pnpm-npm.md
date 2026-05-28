@@ -1,4 +1,5 @@
 ---
+sidebarTitle: Windows n8n 安装
 title: 【Windows 环境终极教程】安装 n8n：从 pnpm 的“坑”到 npm 的“稳”
 ---
 
