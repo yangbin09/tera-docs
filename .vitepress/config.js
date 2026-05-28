@@ -123,14 +123,14 @@ export default defineConfig({
 
     // 侧边栏 - 使用自动化路径修复的 vitepress-sidebar
     sidebar: {
-      // Categories 目录自动生成侧边栏
+      // ========== Categories 目录 ==========
       '/categories/': generateSidebarWithCorrectPaths('/categories/', 'docs/categories', {
         hyphenToSpace: true,
         underscoreToSpace: true,
         capitalizeFirst: true,
         capitalizeEachWords: true,
         collapsed: false,
-        collapseDepth: 2,
+        collapseDepth: 3,
         sortMenusByName: true,
         sortMenusOrderByDescending: false,
         frontmatterTitleFieldName: 'title',
@@ -138,34 +138,60 @@ export default defineConfig({
         useFolderTitleFromIndexFile: true,
         excludeFilesByFrontmatterFieldName: 'sidebarExclude'
       }),
-      
-      // Tools 目录自动生成侧边栏
+
+      // ========== Tools 目录 ==========
       '/tools/': generateSidebarWithCorrectPaths('/tools/', 'docs/tools', {
         hyphenToSpace: true,
         underscoreToSpace: true,
         capitalizeFirst: true,
         capitalizeEachWords: true,
         collapsed: false,
-        collapseDepth: 2,
+        collapseDepth: 3,
         sortMenusByName: true,
         sortMenusOrderByDescending: false,
-        frontmatterTitleFieldName: 'title'
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
       }),
-      
-      // Essays 目录自动生成侧边栏
+
+      // ========== Essays 目录（支持深层嵌套） ==========
       '/essays/': generateSidebarWithCorrectPaths('/essays/', 'docs/essays', {
         hyphenToSpace: true,
         underscoreToSpace: true,
         capitalizeFirst: true,
         capitalizeEachWords: true,
         collapsed: false,
-        collapseDepth: 2,
+        collapseDepth: 5,
         sortMenusByName: true,
         sortMenusOrderByDescending: false,
-        frontmatterTitleFieldName: 'title'
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude',
+        excludeDirs: ['mp3', 'images', 'article-images']
       }),
-        // Articles 目录自动生成侧边栏
+
+      // ========== Articles 主目录 ==========
       '/articles/': generateSidebarWithCorrectPaths('/articles/', 'docs/articles', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 3,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      // ========== Articles 子目录侧边栏 ==========
+
+      // Git 工作流
+      '/articles/git-workflow/': generateSidebarWithCorrectPaths('/articles/git-workflow/', 'docs/articles/git-workflow', {
         hyphenToSpace: true,
         underscoreToSpace: true,
         capitalizeFirst: true,
@@ -180,8 +206,258 @@ export default defineConfig({
         excludeFilesByFrontmatterFieldName: 'sidebarExclude'
       }),
 
-      // Git 工作流目录自动生成侧边栏
-      '/articles/git-workflow/': generateSidebarWithCorrectPaths('/articles/git-workflow/', 'docs/articles/git-workflow', {
+      // n8n 工作流
+      '/articles/n8n-workflow/': generateSidebarWithCorrectPaths('/articles/n8n-workflow/', 'docs/articles/n8n-workflow', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 2,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      // Markdown 指南
+      '/articles/markdown-guide/': generateSidebarWithCorrectPaths('/articles/markdown-guide/', 'docs/articles/markdown-guide', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 2,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      // 绘画提示词
+      '/articles/image-prompts/': generateSidebarWithCorrectPaths('/articles/image-prompts/', 'docs/articles/image-prompts', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 2,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      // 服务器
+      '/articles/server/': generateSidebarWithCorrectPaths('/articles/server/', 'docs/articles/server', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 2,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      // 小红书
+      '/articles/xiaohongshu/': generateSidebarWithCorrectPaths('/articles/xiaohongshu/', 'docs/articles/xiaohongshu', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 2,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      // Java 指南
+      '/articles/java-guide/': generateSidebarWithCorrectPaths('/articles/java-guide/', 'docs/articles/java-guide', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 2,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      // LangChain4j
+      '/articles/langchain4j-getting-started/': generateSidebarWithCorrectPaths('/articles/langchain4j-getting-started/', 'docs/articles/langchain4j-getting-started', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 2,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      // 自动化博客
+      '/articles/automated-blog/': generateSidebarWithCorrectPaths('/articles/automated-blog/', 'docs/articles/automated-blog', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 2,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      // Obsidian GitHub Sync
+      '/articles/obsidian-github-sync/': generateSidebarWithCorrectPaths('/articles/obsidian-github-sync/', 'docs/articles/obsidian-github-sync', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 2,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      // U盘环境
+      '/articles/u-disk/': generateSidebarWithCorrectPaths('/articles/u-disk/', 'docs/articles/u-disk', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 2,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      // 中文命名的子目录（使用别名映射）
+      '/articles/服务器/': generateSidebarWithCorrectPaths('/articles/服务器/', 'docs/articles/服务器', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 2,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      '/articles/绘画提示词/': generateSidebarWithCorrectPaths('/articles/绘画提示词/', 'docs/articles/绘画提示词', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 2,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      '/articles/小红书/': generateSidebarWithCorrectPaths('/articles/小红书/', 'docs/articles/小红书', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 2,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      '/articles/U盘环境/': generateSidebarWithCorrectPaths('/articles/U盘环境/', 'docs/articles/U盘环境', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 2,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      '/articles/从0到1搭建一个自动化博客/': generateSidebarWithCorrectPaths('/articles/从0到1搭建一个自动化博客/', 'docs/articles/从0到1搭建一个自动化博客', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 2,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      '/articles/从0到1搭建一个n8n工作流/': generateSidebarWithCorrectPaths('/articles/从0到1搭建一个n8n工作流/', 'docs/articles/从0到1搭建一个n8n工作流', {
+        hyphenToSpace: true,
+        underscoreToSpace: true,
+        capitalizeFirst: true,
+        capitalizeEachWords: true,
+        collapsed: false,
+        collapseDepth: 2,
+        sortMenusByName: true,
+        sortMenusOrderByDescending: false,
+        frontmatterTitleFieldName: 'title',
+        useTitleFromFrontmatter: true,
+        useFolderTitleFromIndexFile: true,
+        excludeFilesByFrontmatterFieldName: 'sidebarExclude'
+      }),
+
+      '/articles/从0到1学习LangChain4j/': generateSidebarWithCorrectPaths('/articles/从0到1学习LangChain4j/', 'docs/articles/从0到1学习LangChain4j', {
         hyphenToSpace: true,
         underscoreToSpace: true,
         capitalizeFirst: true,

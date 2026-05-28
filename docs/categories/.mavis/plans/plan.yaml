@@ -1,0 +1,278 @@
+version: 1
+plan:
+  name: '批量优化提示词文件'
+  max_concurrency: 6
+  max_consecutive_failures: 3
+  max_cycles: 2
+tasks:
+  - id: content-creation
+    title: '处理内容创作类提示词 (14个)'
+    prompt: |
+      处理以下提示词文件，将每个文件整理成标准格式并保存到 D:\个人笔记\网站笔记项目\docs\categories\optimized_prompts\
+
+      文件列表：
+      1. D:\个人笔记\网站笔记项目\docs\categories\内容创作\AI写小说指令.md
+      2. D:\个人笔记\网站笔记项目\docs\categories\内容创作\AI生成散文指令.md
+      3. D:\个人笔记\网站笔记项目\docs\categories\内容创作\仿写文章指令.md
+      4. D:\个人笔记\网站笔记项目\docs\categories\内容创作\历史人物.md
+      5. D:\个人笔记\网站笔记项目\docs\categories\内容创作\小红书内容.md
+      6. D:\个人笔记\网站笔记项目\docs\categories\内容创作\小红书种草.md
+      7. D:\个人笔记\网站笔记项目\docs\categories\内容创作\文章转语音稿.md
+      8. D:\个人笔记\网站笔记项目\docs\categories\内容创作\民间故事.md
+      9. D:\个人笔记\网站笔记项目\docs\categories\内容创作\演讲稿.md
+      10. D:\个人笔记\网站笔记项目\docs\categories\内容创作\热点故事.md
+      11. D:\个人笔记\网站笔记项目\docs\categories\内容创作\短视频脚本.md
+      12. D:\个人笔记\网站笔记项目\docs\categories\内容创作\节日热点.md
+      13. D:\个人笔记\网站笔记项目\docs\categories\内容创作\选题策划.md
+      14. D:\个人笔记\网站笔记项目\docs\categories\内容创作\金句仿写.md
+
+      每个文件按以下结构整理：
+      # 标题
+      ## 1. 这个提示词能做什么
+      ## 2. 适合哪些场景
+      ## 3. 适合哪些人使用
+      ## 4. 使用方法
+      ## 5. 输入内容建议（表格）
+      ## 6. 输出结果说明
+      ## 7. 提示词设计思路
+      ## 8. 使用注意事项
+      ## 9. 完整可复制提示词
+
+      重要规则：
+      - 不要改变原提示词的核心意图
+      - 不要胡编功能
+      - 提示词必须可直接复制使用
+      - 语言要清楚、实用、简单，面向小白
+      - 不要使用营销腔或明显AI味
+      - 文件命名：原文件名_优化版.md
+      - 使用 text 代码块包含完整提示词
+    assigned_to: general
+    verified_by: verifier
+    verify_prompt: '检查输出的每个文件是否符合标准格式要求'
+    timeout_ms: 1800000
+
+  - id: marketing
+    title: '处理营销推广类提示词 (11个)'
+    prompt: |
+      处理以下提示词文件，将每个文件整理成标准格式并保存到 D:\个人笔记\网站笔记项目\docs\categories\optimized_prompts\
+
+      文件列表：
+      1. D:\个人笔记\网站笔记项目\docs\categories\营销推广\内容优化.md
+      2. D:\个人笔记\网站笔记项目\docs\categories\营销推广\小红书爆款.md
+      3. D:\个人笔记\网站笔记项目\docs\categories\营销推广\小红书种草.md
+      4. D:\个人笔记\网站笔记项目\docs\categories\营销推广\广告文案.md
+      5. D:\个人笔记\网站笔记项目\docs\categories\营销推广\微信文章.md
+      6. D:\个人笔记\网站笔记项目\docs\categories\营销推广\微信朋友圈.md
+      7. D:\个人笔记\网站笔记项目\docs\categories\营销推广\情感内容.md
+      8. D:\个人笔记\网站笔记项目\docs\categories\营销推广\情感标题.md
+      9. D:\个人笔记\网站笔记项目\docs\categories\营销推广\抖音美食赛道策略.md
+      10. D:\个人笔记\网站笔记项目\docs\categories\营销推广\评论互动.md
+      11. D:\个人笔记\网站笔记项目\docs\categories\营销推广\黄金时间.md
+
+      每个文件按以下结构整理：
+      # 标题
+      ## 1. 这个提示词能做什么
+      ## 2. 适合哪些场景
+      ## 3. 适合哪些人使用
+      ## 4. 使用方法
+      ## 5. 输入内容建议（表格）
+      ## 6. 输出结果说明
+      ## 7. 提示词设计思路
+      ## 8. 使用注意事项
+      ## 9. 完整可复制提示词
+
+      重要规则：
+      - 不要改变原提示词的核心意图
+      - 不要胡编功能
+      - 提示词必须可直接复制使用
+      - 语言要清楚、实用、简单，面向小白
+      - 不要使用营销腔或明显AI味
+      - 文件命名：原文件名_优化版.md
+      - 使用 text 代码块包含完整提示词
+    assigned_to: general
+    verified_by: verifier
+    verify_prompt: '检查输出的每个文件是否符合标准格式要求'
+    timeout_ms: 1800000
+
+  - id: professional
+    title: '处理专业技能+品牌营销类提示词 (7个)'
+    prompt: |
+      处理以下提示词文件，将每个文件整理成标准格式并保存到 D:\个人笔记\网站笔记项目\docs\categories\optimized_prompts\
+
+      文件列表：
+      1. D:\个人笔记\网站笔记项目\docs\categories\专业技能\beiqi-wuji-soup.md
+      2. D:\个人笔记\网站笔记项目\docs\categories\专业技能\会议纪要整理.md
+      3. D:\个人笔记\网站笔记项目\docs\categories\专业技能\公文写作指令.md
+      4. D:\个人笔记\网站笔记项目\docs\categories\专业技能\教案写作指令.md
+      5. D:\个人笔记\网站笔记项目\docs\categories\专业技能\英文文献阅读.md
+      6. D:\个人笔记\网站笔记项目\docs\categories\专业技能\项目复盘报告.md
+      7. D:\个人笔记\网站笔记项目\docs\categories\品牌营销\个人IP文案指令.md
+
+      每个文件按以下结构整理：
+      # 标题
+      ## 1. 这个提示词能做什么
+      ## 2. 适合哪些场景
+      ## 3. 适合哪些人使用
+      ## 4. 使用方法
+      ## 5. 输入内容建议（表格）
+      ## 6. 输出结果说明
+      ## 7. 提示词设计思路
+      ## 8. 使用注意事项
+      ## 9. 完整可复制提示词
+
+      重要规则：
+      - 不要改变原提示词的核心意图
+      - 不要胡编功能
+      - 提示词必须可直接复制使用
+      - 语言要清楚、实用、简单，面向小白
+      - 不要使用营销腔或明显AI味
+      - 文件命名：原文件名_优化版.md
+      - 使用 text 代码块包含完整提示词
+    assigned_to: general
+    verified_by: verifier
+    verify_prompt: '检查输出的每个文件是否符合标准格式要求'
+    timeout_ms: 1800000
+
+  - id: media-ops
+    title: '处理媒体运营类提示词 (6个)'
+    prompt: |
+      处理以下提示词文件，将每个文件整理成标准格式并保存到 D:\个人笔记\网站笔记项目\docs\categories\optimized_prompts\
+
+      文件列表：
+      1. D:\个人笔记\网站笔记项目\docs\categories\媒体运营\头条文章.md
+      2. D:\个人笔记\网站笔记项目\docs\categories\媒体运营\好书推荐.md
+      3. D:\个人笔记\网站笔记项目\docs\categories\媒体运营\对标博主账号拆解指令.md
+      4. D:\个人笔记\网站笔记项目\docs\categories\媒体运营\微头条框架创作指令.md
+      5. D:\个人笔记\网站笔记项目\docs\categories\媒体运营\视频分析.md
+      6. D:\个人笔记\网站笔记项目\docs\categories\媒体运营\评论回复.md
+
+      每个文件按以下结构整理：
+      # 标题
+      ## 1. 这个提示词能做什么
+      ## 2. 适合哪些场景
+      ## 3. 适合哪些人使用
+      ## 4. 使用方法
+      ## 5. 输入内容建议（表格）
+      ## 6. 输出结果说明
+      ## 7. 提示词设计思路
+      ## 8. 使用注意事项
+      ## 9. 完整可复制提示词
+
+      重要规则：
+      - 不要改变原提示词的核心意图
+      - 不要胡编功能
+      - 提示词必须可直接复制使用
+      - 语言要清楚、实用、简单，面向小白
+      - 不要使用营销腔或明显AI味
+      - 文件命名：原文件名_优化版.md
+      - 使用 text 代码块包含完整提示词
+    assigned_to: general
+    verified_by: verifier
+    verify_prompt: '检查输出的每个文件是否符合标准格式要求'
+    timeout_ms: 1800000
+
+  - id: education
+    title: '处理教育学习类提示词 (3个)'
+    prompt: |
+      处理以下提示词文件，将每个文件整理成标准格式并保存到 D:\个人笔记\网站笔记项目\docs\categories\optimized_prompts\
+
+      文件列表：
+      1. D:\个人笔记\网站笔记项目\docs\categories\教育学习\AI制作PPT.md
+      2. D:\个人笔记\网站笔记项目\docs\categories\教育学习\单词记忆.md
+      3. D:\个人笔记\网站笔记项目\docs\categories\教育学习\记忆宫殿.md
+
+      每个文件按以下结构整理：
+      # 标题
+      ## 1. 这个提示词能做什么
+      ## 2. 适合哪些场景
+      ## 3. 适合哪些人使用
+      ## 4. 使用方法
+      ## 5. 输入内容建议（表格）
+      ## 6. 输出结果说明
+      ## 7. 提示词设计思路
+      ## 8. 使用注意事项
+      ## 9. 完整可复制提示词
+
+      重要规则：
+      - 不要改变原提示词的核心意图
+      - 不要胡编功能
+      - 提示词必须可直接复制使用
+      - 语言要清楚、实用、简单，面向小白
+      - 不要使用营销腔或明显AI味
+      - 文件命名：原文件名_优化版.md
+      - 使用 text 代码块包含完整提示词
+    assigned_to: general
+    verified_by: verifier
+    verify_prompt: '检查输出的每个文件是否符合标准格式要求'
+    timeout_ms: 1800000
+
+  - id: tools
+    title: '处理工具类提示词 (4个)'
+    prompt: |
+      处理以下提示词文件，将每个文件整理成标准格式并保存到 D:\个人笔记\网站笔记项目\docs\categories\optimized_prompts\
+
+      文件列表：
+      1. D:\个人笔记\网站笔记项目\docs\categories\tools\关键词组合.md
+      2. D:\个人笔记\网站笔记项目\docs\categories\tools\内容审核.md
+      3. D:\个人笔记\网站笔记项目\docs\categories\tools\播客整理器.md
+      4. D:\个人笔记\网站笔记项目\docs\categories\tools\文本格式化.md
+
+      每个文件按以下结构整理：
+      # 标题
+      ## 1. 这个提示词能做什么
+      ## 2. 适合哪些场景
+      ## 3. 适合哪些人使用
+      ## 4. 使用方法
+      ## 5. 输入内容建议（表格）
+      ## 6. 输出结果说明
+      ## 7. 提示词设计思路
+      ## 8. 使用注意事项
+      ## 9. 完整可复制提示词
+
+      重要规则：
+      - 不要改变原提示词的核心意图
+      - 不要胡编功能
+      - 提示词必须可直接复制使用
+      - 语言要清楚、实用、简单，面向小白
+      - 不要使用营销腔或明显AI味
+      - 文件命名：原文件名_优化版.md
+      - 使用 text 代码块包含完整提示词
+    assigned_to: general
+    verified_by: verifier
+    verify_prompt: '检查输出的每个文件是否符合标准格式要求'
+    timeout_ms: 1800000
+
+  - id: report
+    title: '生成处理报告'
+    prompt: |
+      扫描目录 D:\个人笔记\网站笔记项目\docs\categories\optimized_prompts\ 统计处理结果。
+
+      生成处理报告.md，内容包含：
+      # 提示词整理处理报告
+
+      ## 1. 处理概况
+      | 项目 | 数量 |
+      |---|---|
+      | 扫描文件数 | X |
+      | 成功处理数 | X |
+      | 跳过文件数 | X |
+      | 失败文件数 | X |
+
+      ## 2. 成功处理文件清单
+      | 原文件 | 输出文件 | 主题 | 备注 |
+      |---|---|---|---|
+      | ... | ... | ... | ... |
+
+      ## 3. 整体建议
+      简单总结这些提示词后续如何继续优化，例如：
+      - 哪些提示词适合封装成 Skill
+      - 哪些提示词适合做成课程案例
+      - 哪些提示词需要补充示例
+      - 哪些提示词需要增加输入输出规范
+
+      保存到 D:\个人笔记\网站笔记项目\docs\categories\optimized_prompts\处理报告.md
+    assigned_to: general
+    depends_on: [content-creation, marketing, professional, media-ops, education, tools]
+    verified_by: verifier
+    verify_prompt: '检查报告内容是否完整准确'
+    timeout_ms: 300000
