@@ -1,6 +1,6 @@
 ---
 title: 小红书自动发布（Windows 环境）完整指南
-sidebarTitle: 小红书 Windows 发布
+sidebarTitle: 小红书 Win
 ---
 
 # 小红书自动发布（Windows 环境）完整指南

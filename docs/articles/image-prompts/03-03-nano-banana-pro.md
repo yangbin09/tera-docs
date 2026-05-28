@@ -1,6 +1,6 @@
 ---
 title: 03. Nano Banana Pro大师指南：突破想象的边界
-sidebarTitle: 03 突破想象边界
+sidebarTitle: 03 突破边界
 ---
 
 # 03. Nano Banana Pro大师指南：突破想象的边界

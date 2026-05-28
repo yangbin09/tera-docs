@@ -1,6 +1,6 @@
 ---
 title: 02 1Panel网页安装n8n
-sidebarTitle: 02 1Panel 安装n8n
+sidebarTitle: 02 1Panel
 ---
 
 

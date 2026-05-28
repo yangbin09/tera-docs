@@ -1,5 +1,6 @@
 ---
 title: "Java编程语言完整指南"
+sidebarTitle: Java 编程指南
 description: "Java编程语言的全面介绍，涵盖核心特性、应用领域、发展版本和生态系统"
 tags: [Java, 编程语言, 面向对象, 跨平台, 学习教程]
 category: "学习教育"

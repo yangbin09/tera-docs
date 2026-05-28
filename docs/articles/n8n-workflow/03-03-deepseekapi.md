@@ -1,6 +1,6 @@
 ---
 title: 03 获取 DeepSeek_API 密钥
-sidebarTitle: 03 DeepSeek API 密钥
+sidebarTitle: 03 DeepSeek
 ---
 
 

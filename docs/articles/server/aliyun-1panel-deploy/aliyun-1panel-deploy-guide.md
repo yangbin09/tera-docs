@@ -1,7 +1,7 @@
 
 ---
 title: 阿里云快速部署 1Panel 服务器管理面板
-sidebarTitle: 阿里云部署 1Panel
+sidebarTitle: 阿里云 1Panel
 order: 3
 ---
 

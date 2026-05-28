@@ -1,6 +1,6 @@
 ---
 title: Claude Desktop 配置指南
-sidebarTitle: Claude Desktop 配置
+sidebarTitle: Claude 配置
 ---
 
 # Claude Desktop 配置指南

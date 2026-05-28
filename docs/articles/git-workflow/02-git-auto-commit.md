@@ -1,5 +1,6 @@
 ---
 title: Git 自动提交脚本使用指南
+sidebarTitle: Git 自动提交
 ---
 
 # Git 自动提交脚本使用指南

@@ -1,6 +1,6 @@
 ---
 title: AI Portable Workspace 使用教程：配置 DeepSeek Key 并完成环境测试
-sidebarTitle: AI Portable Workspace
+sidebarTitle: Portable WS
 ---
 
 # AI Portable Workspace 使用教程：配置 DeepSeek Key 并完成环境测试

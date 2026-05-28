@@ -1,6 +1,6 @@
 ---
 title: 02. Nano Banana Pro进阶指南：图生图与风格的魔法
-sidebarTitle: 02 图生图与风格
+sidebarTitle: 02 图生图
 ---
 
 # 02. Nano Banana Pro进阶指南：图生图与风格的魔法

@@ -1,6 +1,6 @@
 ---
 title: LangChain4j 学习笔记 04：添加 Tool Calling，让 AI 能调用 Java 方法
-sidebarTitle: 04 Tool Calling 调用 Java
+sidebarTitle: 04 Tool Calling
 ---
 
 # LangChain4j 学习笔记 04：添加 Tool Calling，让 AI 能调用 Java 方法

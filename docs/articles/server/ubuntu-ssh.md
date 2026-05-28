@@ -1,6 +1,6 @@
 ---
 title: Ubuntu 远程连接终极指南：从零开始配置 SSH 服务
-sidebarTitle: Ubuntu SSH 远程连接
+sidebarTitle: Ubuntu SSH
 ---
 
 # Ubuntu 远程连接终极指南：从零开始配置 SSH 服务

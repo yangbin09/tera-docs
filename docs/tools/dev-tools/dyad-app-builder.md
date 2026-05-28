@@ -1,6 +1,6 @@
 ---
 title: 'Dyad AI应用构建工具使用指南'
-sidebarTitle: 'Dyad AI应用构建工具'
+sidebarTitle: Dyad 工具
 description: '免费开源的本地AI应用构建工具，支持全栈开发、多模型集成和一键部署'
 tags: [AI工具, 应用开发, 全栈开发, 本地部署, 开源工具]
 category: '工具辅助类'

@@ -1,6 +1,6 @@
 ---
 title: 04 DeepSeek(AI问答工作流)
-sidebarTitle: 04 DeepSeek 工作流
+sidebarTitle: 04 DeepSeek
 ---
 
 

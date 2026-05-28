@@ -1,6 +1,6 @@
 ---
 title: Windows 下 Ollama + DeepSeek-R1-1.5B 完整部署文档
-sidebarTitle: Ollama + DeepSeek 部署
+sidebarTitle: Ollama 部署
 ---
 
 # Windows 下 Ollama + DeepSeek-R1-1.5B 完整部署文档
