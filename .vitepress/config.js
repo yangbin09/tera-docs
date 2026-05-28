@@ -138,7 +138,10 @@ export default withMermaid(defineConfig({
     },
     define: {
       __VUE_PROD_DEVTOOLS__: false
-    }
+    },
+    plugins: [
+      groupIconVitePlugin()
+    ]
   },
 
   themeConfig: {
