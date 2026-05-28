@@ -1,3 +1,7 @@
+---
+title: AI 编程工具官网导航
+---
+
 # AI 编程工具官网导航：Trae、Claude Code、CC Switch、DeepSeek、MiniMax、Node、npm、Obsidian
 
 > 本文整理了一份 AI 编程与本地开发环境常用官网导航，适合用于安装 Trae、Claude Code、CC Switch，以及配置 DeepSeek、MiniMax、Node.js、npm、pnpm、Git、Obsidian 等工具。  

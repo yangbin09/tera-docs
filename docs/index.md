@@ -33,27 +33,27 @@ features:
 ### 📋 指令分类
 
 #### 🎯 专业应用
-- [专业技能](./categories/专业技能/) - 教案写作、公文写作、项目复盘等专业场景指令
-- [内容创作](./categories/内容创作/) - AI写小说、散文创作、短视频脚本等创意写作指令
-- [媒体运营](./categories/媒体运营/) - 头条文章、视频分析、评论回复等媒体运营指令
+- [专业技能](./categories/professional-skills/) - 教案写作、公文写作、项目复盘等专业场景指令
+- [内容创作](./categories/content-creation/) - AI写小说、散文创作、短视频脚本等创意写作指令
+- [媒体运营](./categories/media-operations/) - 头条文章、视频分析、评论回复等媒体运营指令
 
 #### 🚀 营销推广
-- [营销推广](./categories/营销推广/) - 小红书爆款、广告文案、情感内容等营销类指令
-- [品牌营销](./categories/品牌营销) - 个人IP文案等品牌建设指令
+- [营销推广](./categories/marketing-promotion/) - 小红书爆款、广告文案、情感内容等营销类指令
+- [品牌营销](./categories/brand-marketing) - 个人IP文案等品牌建设指令
 
 #### 📚 学习教育
-- [教育学习](./categories/教育学习/) - PPT制作、编程指南、记忆方法等学习辅助指令
+- [教育学习](./categories/education-learning/) - PPT制作、编程指南、记忆方法等学习辅助指令
 - [实用工具](./categories/tools/) - 关键词组合、内容审核、文本格式化等工具类指令
 
 ### 🛠️ 工具集合
 
 #### 🤖 AI相关工具
-- [AI工具](./tools/AI工具) - Chrome MCP服务器、Ollama部署、Claude配置等AI工具
-- [AI工具综合指南](./tools/AI工具/ai-tools-guide) - 全面的AI工具使用说明和最佳实践
+- [AI工具](./tools/ai-tools) - Chrome MCP服务器、Ollama部署、Claude配置等AI工具
+- [AI工具综合指南](./tools/ai-tools/ai-tools-guide) - 全面的AI工具使用说明和最佳实践
 
 #### 💻 开发与文档
-- [开发工具](./tools/开发工具) - Dyad AI应用构建器等开发平台
-- [文档工具](./tools/文档工具) - MarkItDown转换工具、批量处理脚本
+- [开发工具](./tools/dev-tools) - Dyad AI应用构建器等开发平台
+- [文档工具](./tools/doc-tools) - MarkItDown转换工具、批量处理脚本
 - [服务器工具](./tools/服务器工具) - CentOS安装、Nginx配置等服务器管理工具
 
 ### 📖 文章内容

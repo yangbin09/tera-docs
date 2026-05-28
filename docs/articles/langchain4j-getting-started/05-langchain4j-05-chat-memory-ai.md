@@ -1,6 +1,7 @@
 ---
 title: LangChain4j 学习笔记 05：添加 Chat Memory，让 AI 记住上下文
 ---
+sidebarTitle: 05 Chat Memory 上下文
 
 # LangChain4j 学习笔记 05：添加 Chat Memory，让 AI 记住上下文
 

@@ -1,3 +1,7 @@
+---
+title: Windows 下 Ollama + DeepSeek-R1-1.5B 完整部署文档
+---
+
 # Windows 下 Ollama + DeepSeek-R1-1.5B 完整部署文档
 
 > 本文档将帮助你在 Windows 系统中从 0 到 1 完成 Ollama + DeepSeek-R1-1.5B 的安装与部署，支持在线安装与离线部署，涵盖模型目录迁移与基本使用方法。
@@ -181,7 +185,7 @@ pip install *.whl
 
 - [Ollama官方文档](https://ollama.ai/docs)
 - [DeepSeek模型介绍](https://deepseek.com)
-- [Ollama模型迁移教程](./Ollama迁移.md)
+- [Ollama模型迁移教程](./ollama-migration.md)
 - Windows环境变量配置指南（待补充）
 
 ---

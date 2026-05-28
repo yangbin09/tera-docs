@@ -67,8 +67,8 @@
 | [文字排版指令](./tools/文本格式化.md) | 排版优化 | ⭐ | ⭐⭐⭐ |
 | [播客整理助手](./tools/播客整理器.md) | 音频内容整理 | ⭐⭐ | ⭐⭐⭐ |
 | [赛道关键词组合](./tools/关键词组合.md) | 关键词策略 | ⭐⭐ | ⭐⭐⭐ |
-| [Ollama模型迁移教程](./../tools/AI工具/Ollama迁移.md) | Windows系统模型目录迁移 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| [Ollama + DeepSeek完整部署](./../tools/AI工具/Ollama DeepSeek.md) | Windows下AI模型完整部署方案 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| [Ollama模型迁移教程](./../tools/ai-tools/ollama-migration.md) | Windows系统模型目录迁移 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| [Ollama + DeepSeek完整部署](./../tools/ai-tools/ollama-deepseek.md) | Windows下AI模型完整部署方案 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 
 ## 📚 学习教育类
 

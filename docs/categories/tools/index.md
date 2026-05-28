@@ -13,9 +13,9 @@
 - 赛道关键词组合 - 关键词组合和选题策略（待补充）
 
 ## 🤖 AI模型部署与配置
-- [Ollama使用指南](./../../tools/AI工具/Ollama指南.md) - Windows系统下Ollama的详细使用指南，包含2025年最新推荐模型
-- [Ollama + DeepSeek部署](./../../tools/AI工具/Ollama DeepSeek.md) - Windows下Ollama + DeepSeek-R1-1.5B完整部署文档
-- [Ollama模型迁移](./../../tools/AI工具/Ollama迁移.md) - Windows系统下将Ollama模型缓存目录迁移到D盘的完整教程
+- [Ollama使用指南](./../../tools/ai-tools/ollama-guide.md) - Windows系统下Ollama的详细使用指南，包含2025年最新推荐模型
+- [Ollama + DeepSeek部署](./../../tools/ai-tools/ollama-deepseek.md) - Windows下Ollama + DeepSeek-R1-1.5B完整部署文档
+- [Ollama模型迁移](./../../tools/ai-tools/ollama-migration.md) - Windows系统下将Ollama模型缓存目录迁移到D盘的完整教程
 
 ---
 

@@ -1,3 +1,7 @@
+---
+title: Claude Desktop 配置指南
+---
+
 # Claude Desktop 配置指南
 
 本指南将帮助您配置 Claude Desktop 应用，以便更好地使用 AI 写作功能。
