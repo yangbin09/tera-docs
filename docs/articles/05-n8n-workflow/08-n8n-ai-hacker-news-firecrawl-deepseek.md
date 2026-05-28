@@ -1,9 +1,10 @@
 ---
-title: n8n 深度教程：从零构建 AI 驱动的 Hacker News 新闻简报（Firecrawl + DeepSeek 详解）
-sidebarTitle: n8n 新闻简报
+title: 08 n8n 深度教程：从零构建 AI 驱动的 Hacker News 新闻简报（Firecrawl + DeepSeek 详解）
+sidebarTitle: 08 n8n 新闻简报
 ---
+# 08 n8n 深度教程：从零构建 AI 驱动的 Hacker News 新闻简报（Firecrawl + DeepSeek 详解）
 
-# n8n 深度教程：从零构建 AI 驱动的 Hacker News 新闻简报（Firecrawl + DeepSeek 详解）
+## 介绍
 
 ## 概述
 

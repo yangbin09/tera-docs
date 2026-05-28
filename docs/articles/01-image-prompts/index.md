@@ -1,5 +1,5 @@
 ---
-title: 绘画提示词
+title: 01 绘画提示词
 sidebarTitle: 01 绘画提示词
 ---
 

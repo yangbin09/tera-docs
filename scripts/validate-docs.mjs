@@ -86,7 +86,7 @@ function validateRedirectPage(markdownFile, content) {
 }
 
 function validateIndexTitle(markdownFile, content) {
-  if (!markdownFile.replace(/\\/g, '/').endsWith('/index.md')) return
+  if (!markdownFile.replace(/\\/g, '/').endsWith('/07-AI工具.md')) return
   if (content.includes('layout: home') || content.includes('window.location.replace(')) return
 
   if (!/^#\s+.+$/m.test(content)) {

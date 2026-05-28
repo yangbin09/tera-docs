@@ -1,10 +1,10 @@
 ---
-sidebarTitle: Win n8n 安装
-title: 【Windows 环境终极教程】安装 n8n：从 pnpm 的“坑”到 npm 的“稳”
+sidebarTitle: 10 Win n8n 安装
+title: 10 【Windows 环境终极教程】安装 n8n：从 pnpm 的“坑”到 npm 的“稳”
 ---
 
+# 10 【Windows 环境终极教程】安装 n8n：从 pnpm 的“坑”到 npm 的“稳”
 
-# 【Windows 环境终极教程】安装 n8n：从 pnpm 的“坑”到 npm 的“稳”
 
 本教程将指导你在 Windows 10/11 环境下，使用 `nvm` 管理 Node.js 版本，并配置淘宝镜像来安装 n8n。
 

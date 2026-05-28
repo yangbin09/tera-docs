@@ -2,6 +2,7 @@
 title: 04 DeepSeek(AI问答工作流)
 sidebarTitle: 04 DeepSeek
 ---
+# 04 DeepSeek(AI问答工作流)
 
 
 本教程将手把手带你从一个空白的 n8n 画布开始，一步一步构建一个高级 AI 聊天机器人。

@@ -1,6 +1,6 @@
 ---
-title: LangChain4j 从0到1
-sidebarTitle: 03 LangChain4j
+title: 03 LangChain4j 从0到1
+sidebarTitle: 03 LangChain4j 从0到1
 ---
 
 # LangChain4j 从0到1

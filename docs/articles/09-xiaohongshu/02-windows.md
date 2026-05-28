@@ -1,6 +1,6 @@
 ---
-title: 小红书自动发布（Windows 环境）完整指南
-sidebarTitle: 小红书 Win
+title: 02 小红书自动发布（Windows 环境）完整指南
+sidebarTitle: 02 小红书 Win
 ---
 
 # 小红书自动发布（Windows 环境）完整指南
@@ -24,7 +24,7 @@ sidebarTitle: 小红书 Win
 1. 在 Windows 搜索框输入 `CMD`。
 2. 选择“以管理员身份运行”。
 
-![打开命令行](./images/cmd-open.webp)
+![打开命令行](./images/02-cmd-open.webp)
 
 ### 2) 安装 Go
 
@@ -32,7 +32,7 @@ sidebarTitle: 小红书 Win
 winget install GoLang.Go
 ```
 
-![安装 Go](./images/install-go.png)
+![安装 Go](./images/02-install-go.png)
 
 ### 3) 安装 Node.js（LTS）
 
@@ -40,7 +40,7 @@ winget install GoLang.Go
 winget install OpenJS.NodeJS.LTS
 ```
 
-![安装 Node.js](./images/install-node.png)
+![安装 Node.js](./images/02-install-node.png)
 
 ---
 
@@ -49,15 +49,15 @@ winget install OpenJS.NodeJS.LTS
 1. 前往 Releases：<https://github.com/xpzouying/xiaohongshu-mcp/releases>
 2. 选择 Windows 构建包 `xiaohongshu-mcp-windows-amd64.zip`。
 
-![选择 Windows 构建包](./images/release-page.webp)
+![选择 Windows 构建包](./images/02-release-page.webp)
 
 3. 下载完成后解压到本地目录。
 
-![解压构建包](./images/zip-extract.png)
+![解压构建包](./images/02-zip-extract.png)
 
 4. 在解压后的目录空白处，右键选择“在终端中打开”。
 
-![在目录中打开终端](./images/open-terminal.png)
+![在目录中打开终端](./images/02-open-terminal.png)
 
 ---
 
@@ -69,7 +69,7 @@ winget install OpenJS.NodeJS.LTS
 ./xiaohongshu-login-windows-amd64.exe
 ```
 
-![运行登录程序并下载依赖](./images/login-downloading.png)
+![运行登录程序并下载依赖](./images/02-login-downloading.png)
 
 - 首次运行会自动下载所需依赖文件，请耐心等待。
 - 下载完成后，按照提示完成登录。
@@ -80,8 +80,8 @@ winget install OpenJS.NodeJS.LTS
 
 部分 Windows 11 环境可能会误报病毒并拦截运行，可按以下流程添加排除项：
 
-![Windows Defender 误报示例](./images/defender-alert.png)
-![Windows 安全中心入口](./images/windows-security-center.png)
+![Windows Defender 误报示例](./images/02-defender-alert.png)
+![Windows 安全中心入口](./images/02-windows-security-center.png)
 
 1. 打开 Windows 安全中心（Windows Security）。
 2. 点击“病毒和威胁防护”（Virus & threat protection）。
@@ -97,9 +97,9 @@ C:\Users\你的用户名\AppData\Local\Temp\leakless-amd64-adb80298fa6a3af7ced8b
 
 8. 确认添加排除项。
 
-![排除项设置入口](./images/manage-settings-exclusions.png)
-![选择排除路径示例](./images/add-exclusion-path.png)
-![选择文件夹示例](./images/add-exclusion-folder.png)
+![排除项设置入口](./images/02-manage-settings-exclusions.png)
+![选择排除路径示例](./images/02-add-exclusion-path.png)
+![选择文件夹示例](./images/02-add-exclusion-folder.png)
 
 ---
 
@@ -111,8 +111,8 @@ C:\Users\你的用户名\AppData\Local\Temp\leakless-amd64-adb80298fa6a3af7ced8b
 ./xiaohongshu-login-windows-amd64.exe
 ```
 
-![登录程序输出](./images/login-exe-run.png)
-![登录界面示例](./images/login-ui.webp)
+![登录程序输出](./images/02-login-exe-run.png)
+![登录界面示例](./images/02-login-ui.webp)
 
 2. 启动 MCP 服务：
 
@@ -120,7 +120,7 @@ C:\Users\你的用户名\AppData\Local\Temp\leakless-amd64-adb80298fa6a3af7ced8b
 ./xiaohongshu-mcp-windows-amd64.exe
 ```
 
-![启动 MCP 服务](./images/mcp-service-start.png)
+![启动 MCP 服务](./images/02-mcp-service-start.png)
 
 - 注意：服务端口以程序输出为准（示例为 `18060`）。若端口被占用，请关闭冲突程序或修改配置后再启动。
 
@@ -134,8 +134,8 @@ C:\Users\你的用户名\AppData\Local\Temp\leakless-amd64-adb80298fa6a3af7ced8b
 npx @modelcontextprotocol/inspector
 ```
 
-![运行 Inspector 命令](./images/inspector-command.png)
-![Inspector 连接成功示例](./images/inspector-connected.png)
+![运行 Inspector 命令](./images/02-inspector-command.png)
+![Inspector 连接成功示例](./images/02-inspector-connected.png)
 
 - 若无法连接，请检查：服务是否在运行、端口是否正确、防火墙/安全软件是否拦截。
 

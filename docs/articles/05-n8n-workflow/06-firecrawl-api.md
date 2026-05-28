@@ -2,6 +2,11 @@
 title: 06 获取 FireCrawlAPI密钥
 sidebarTitle: 06 FireCrawl API
 ---
+# 06 获取 FireCrawlAPI密钥
+
+
+
+## 介绍
 
 
 ![](./images/Pasted_image_20251022232112.webp)

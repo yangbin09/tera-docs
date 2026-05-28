@@ -1,6 +1,6 @@
 ---
-title: Java 编程指南
-sidebarTitle: 02 Java 编程
+title: 02 Java 编程指南
+sidebarTitle: 02 Java 编程指南
 ---
 
 # Java 编程指南

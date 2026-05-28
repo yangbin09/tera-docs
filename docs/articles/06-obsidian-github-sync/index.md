@@ -1,6 +1,6 @@
 ---
-title: Obsidian GitHub Sync 配置
-sidebarTitle: Obsidian Sync
+title: 06 Obsidian GitHub Sync 配置
+sidebarTitle: 06 Obsidian Sync
 
 ---
 
