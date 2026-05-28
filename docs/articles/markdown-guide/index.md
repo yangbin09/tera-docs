@@ -1,5 +1,7 @@
 ---
 title: Markdown 语法说明
+sidebarTitle: Markdown 语法说明
+
 ---
 
 # Markdown 语法说明

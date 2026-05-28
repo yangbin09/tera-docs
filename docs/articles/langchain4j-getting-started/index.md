@@ -1,5 +1,7 @@
 ---
 title: LangChain4j 从0到1
+sidebarTitle: LangChain4j 从0到1
+
 ---
 
 # LangChain4j 从0到1

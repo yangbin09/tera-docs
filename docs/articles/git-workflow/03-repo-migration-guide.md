@@ -1,5 +1,7 @@
 ---
 title: GitHub 仓库迁移指南
+sidebarTitle: 03 仓库迁移
+
 ---
 
 # GitHub 仓库迁移指南

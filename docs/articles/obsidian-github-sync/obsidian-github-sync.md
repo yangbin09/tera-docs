@@ -1,5 +1,7 @@
 ---
 title: Obsidian GitHub Sync 配置
+sidebarTitle: Obsidian GitHub Sync
+
 ---
 
 当然可以。我们来创建一个**终极详细版本**的教程，包含所有您可以直接点击的链接、每个步骤的详细解释以及如何验证操作是否成功的说明。

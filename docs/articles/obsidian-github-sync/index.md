@@ -1,5 +1,7 @@
 ---
 title: Obsidian GitHub Sync 配置
+sidebarTitle: Obsidian GitHub Sync
+
 ---
 
 # Obsidian GitHub Sync 配置

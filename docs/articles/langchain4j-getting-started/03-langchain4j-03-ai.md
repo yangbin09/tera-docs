@@ -1,7 +1,7 @@
 ---
 title: LangChain4j 学习笔记 03：添加学习计划助手接口，让 AI 返回结构化结果
----
 sidebarTitle: 03 学习计划助手
+---
 
 # LangChain4j 学习笔记 03：添加学习计划助手接口，让 AI 返回结构化结果
 

@@ -1,7 +1,7 @@
 ---
 title: LangChain4j 学习笔记 02：加入 Assistant 接口，让 AI 回答更像一个“指定角色”
----
 sidebarTitle: 02 Assistant 接口
+---
 
 
 # LangChain4j 学习笔记 02：加入 Assistant 接口，让 AI 回答更像一个“指定角色”
