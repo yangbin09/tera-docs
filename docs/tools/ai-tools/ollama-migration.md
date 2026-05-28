@@ -1,5 +1,6 @@
 ---
 title: Ollama 模型缓存目录迁移到 D 盘
+sidebarTitle: Ollama 缓存迁移
 ---
 
 # Windows 系统下将 Ollama 模型缓存目录迁移到 D 盘的完整教程

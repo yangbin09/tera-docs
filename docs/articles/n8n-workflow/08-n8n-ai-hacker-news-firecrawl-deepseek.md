@@ -1,5 +1,6 @@
 ---
 title: n8n 深度教程：从零构建 AI 驱动的 Hacker News 新闻简报（Firecrawl + DeepSeek 详解）
+sidebarTitle: n8n AI 新闻简报
 ---
 
 # n8n 深度教程：从零构建 AI 驱动的 Hacker News 新闻简报（Firecrawl + DeepSeek 详解）

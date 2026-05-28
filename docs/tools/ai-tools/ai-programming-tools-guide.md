@@ -1,5 +1,6 @@
 ---
 title: AI 编程工具官网导航
+sidebarTitle: AI 编程工具官网
 ---
 
 # AI 编程工具官网导航：Trae、Claude Code、CC Switch、DeepSeek、MiniMax、Node、npm、Obsidian

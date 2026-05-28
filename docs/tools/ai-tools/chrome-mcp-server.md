@@ -1,5 +1,6 @@
 ---
 title: "Chrome MCP Server - 浏览器AI自动化工具"
+sidebarTitle: "Chrome MCP Server"
 description: "基于Chrome扩展的模型上下文协议服务器，让AI接管你的浏览器，实现复杂的浏览器自动化、内容分析和语义搜索"
 tags: [Chrome, MCP, 浏览器自动化, AI工具, 扩展]
 category: "工具辅助类"
