@@ -142,6 +142,17 @@ export default withMermaid(defineConfig({
     define: {
       __VUE_PROD_DEVTOOLS__: false
     },
+    ssr: {
+      noExternal: [
+        '@nolebase/vitepress-plugin-enhanced-readabilities',
+        '@nolebase/vitepress-plugin-highlight-targeted-heading',
+        '@nolebase/vitepress-plugin-inline-link-preview',
+        '@nolebase/vitepress-plugin-meta',
+        '@nolebase/vitepress-plugin-og-image',
+        '@nolebase/ui',
+        '@davidingplus/vitepress-image-viewer'
+      ]
+    },
     plugins: [
       groupIconVitePlugin()
     ]
