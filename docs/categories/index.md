@@ -13,11 +13,11 @@ sidebarTitle: 指令分类
 
 | 指令名称 | 适用场景 | 难度等级 | 推荐指数 |
 |---------|---------|---------|---------|
-| [AI写小说](./00-content-creation/AI写小说指令.md) | 小说创作 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| [AI生成散文](./00-content-creation/AI生成散文指令.md) | 散文写作 | ⭐⭐ | ⭐⭐⭐⭐ |
-| [民间故事小说](./00-content-creation/民间故事.md) | 故事创作 | ⭐⭐⭐ | ⭐⭐⭐⭐ |
-| [仿写名人语录](./00-content-creation/金句仿写.md) | 语录创作 | ⭐⭐ | ⭐⭐⭐ |
-| [仿写文章指令](./00-content-creation/仿写文章指令.md) | 文章仿写 | ⭐⭐ | ⭐⭐⭐⭐ |
+| [AI写小说](./00-content-creation/ai-novel-writing.md) | 小说创作 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| [AI生成散文](./00-content-creation/ai-essay-writing.md) | 散文写作 | ⭐⭐ | ⭐⭐⭐⭐ |
+| [民间故事小说](./00-content-creation/folk-stories.md) | 故事创作 | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| [仿写名人语录](./00-content-creation/quote-imitation.md) | 语录创作 | ⭐⭐ | ⭐⭐⭐ |
+| [仿写文章指令](./00-content-creation/article-imitation.md) | 文章仿写 | ⭐⭐ | ⭐⭐⭐⭐ |
 
 ## 📱 营销文案类
 
@@ -25,17 +25,17 @@ sidebarTitle: 指令分类
 
 | 指令名称 | 适用平台 | 难度等级 | 推荐指数 |
 |---------|---------|---------|---------|
-| [小红书爆款文案](./01-marketing-promotion/小红书爆款.md) | 小红书 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| [小红书种草文案](./01-marketing-promotion/小红书种草.md) | 小红书 | ⭐⭐ | ⭐⭐⭐⭐ |
-| [情绪化爆款标题](./01-marketing-promotion/情感标题.md) | 全平台 | ⭐⭐ | ⭐⭐⭐⭐⭐ |
-| [情绪化爆款文案](./01-marketing-promotion/情感内容.md) | 全平台 | ⭐⭐⭐ | ⭐⭐⭐⭐ |
-| [公众号推文](./01-marketing-promotion/微信文章.md) | 微信公众号 | ⭐⭐⭐ | ⭐⭐⭐⭐ |
-| [爆款短视频脚本](./00-content-creation/短视频脚本.md) | 抖音/快手 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| [朋友圈软广文案](./01-marketing-promotion/微信朋友圈.md) | 微信朋友圈 | ⭐⭐ | ⭐⭐⭐ |
-| [高质量广告语](./01-marketing-promotion/广告文案.md) | 全平台 | ⭐⭐ | ⭐⭐⭐⭐ |
-| [爆款文案优化助手](./01-marketing-promotion/内容优化.md) | 全平台 | ⭐⭐ | ⭐⭐⭐⭐ |
-| [评论区金句回复](./01-marketing-promotion/评论互动.md) | 全平台 | ⭐⭐ | ⭐⭐⭐ |
-| [爆款作品黄金发布时间](./01-marketing-promotion/黄金时间.md) | 全平台 | ⭐ | ⭐⭐⭐ |
+| [小红书爆款文案](./01-marketing-promotion/xiaohongshu-viral.md) | 小红书 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| [小红书种草文案](./01-marketing-promotion/xiaohongshu-seeding.md) | 小红书 | ⭐⭐ | ⭐⭐⭐⭐ |
+| [情绪化爆款标题](./01-marketing-promotion/emotional-titles.md) | 全平台 | ⭐⭐ | ⭐⭐⭐⭐⭐ |
+| [情绪化爆款文案](./01-marketing-promotion/emotional-content.md) | 全平台 | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| [公众号推文](./01-marketing-promotion/wechat-article.md) | 微信公众号 | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| [爆款短视频脚本](./00-content-creation/short-video-script.md) | 抖音/快手 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| [朋友圈软广文案](./01-marketing-promotion/wechat-moments.md) | 微信朋友圈 | ⭐⭐ | ⭐⭐⭐ |
+| [高质量广告语](./01-marketing-promotion/advertising-copy.md) | 全平台 | ⭐⭐ | ⭐⭐⭐⭐ |
+| [爆款文案优化助手](./01-marketing-promotion/content-optimization.md) | 全平台 | ⭐⭐ | ⭐⭐⭐⭐ |
+| [评论区金句回复](./01-marketing-promotion/comment-interaction.md) | 全平台 | ⭐⭐ | ⭐⭐⭐ |
+| [爆款作品黄金发布时间](./01-marketing-promotion/golden-time.md) | 全平台 | ⭐ | ⭐⭐⭐ |
 
 ## 💼 专业应用类
 
@@ -43,11 +43,11 @@ sidebarTitle: 指令分类
 
 | 指令名称 | 适用场景 | 难度等级 | 推荐指数 |
 |---------|---------|---------|---------|
-| [教案写作指令](./05-professional-skills/教案写作指令.md) | 教育教学 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| [公文写作指令](./05-professional-skills/公文写作指令.md) | 公文写作 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
-| [项目复盘报告](./05-professional-skills/项目复盘报告.md) | 项目管理 | ⭐⭐⭐ | ⭐⭐⭐⭐ |
-| [会议纪要整理](./05-professional-skills/会议纪要整理.md) | 会议记录 | ⭐⭐ | ⭐⭐⭐ |
-| [英文文献阅读](./05-professional-skills/英文文献阅读.md) | 学术研究 | ⭐⭐⭐⭐ | ⭐⭐⭐ |
+| [教案写作指令](./05-professional-skills/lesson-plan.md) | 教育教学 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| [公文写作指令](./05-professional-skills/official-document.md) | 公文写作 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| [项目复盘报告](./05-professional-skills/project-retrospective.md) | 项目管理 | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| [会议纪要整理](./05-professional-skills/meeting-minutes.md) | 会议记录 | ⭐⭐ | ⭐⭐⭐ |
+| [英文文献阅读](./05-professional-skills/english-literature.md) | 学术研究 | ⭐⭐⭐⭐ | ⭐⭐⭐ |
 
 ## 📺 自媒体运营类
 
@@ -55,12 +55,12 @@ sidebarTitle: 指令分类
 
 | 指令名称 | 适用场景 | 难度等级 | 推荐指数 |
 |---------|---------|---------|---------|
-| [微头条10种框架](./02-media-operations/微头条框架创作指令.md) | 今日头条 | ⭐⭐ | ⭐⭐⭐⭐ |
-| [头条号大文章仿写](./02-media-operations/头条文章.md) | 今日头条 | ⭐⭐⭐ | ⭐⭐⭐ |
-| [对标博主账号拆解](./02-media-operations/对标博主账号拆解指令.md) | 账号分析 | ⭐⭐⭐ | ⭐⭐⭐⭐ |
-| [读书博主书单号](./02-media-operations/好书推荐.md) | 读书分享 | ⭐⭐ | ⭐⭐⭐ |
-| [视频内容分析](./02-media-operations/视频分析.md) | 内容分析 | ⭐⭐⭐ | ⭐⭐⭐ |
-| [评论区金句回复](./02-media-operations/评论回复.md) | 用户互动 | ⭐⭐ | ⭐⭐⭐ |
+| [微头条10种框架](./02-media-operations/micro-headline-framework.md) | 今日头条 | ⭐⭐ | ⭐⭐⭐⭐ |
+| [头条号大文章仿写](./02-media-operations/toutiao-article.md) | 今日头条 | ⭐⭐⭐ | ⭐⭐⭐ |
+| [对标博主账号拆解](./02-media-operations/blogger-analysis.md) | 账号分析 | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| [读书博主书单号](./02-media-operations/book-recommendation.md) | 读书分享 | ⭐⭐ | ⭐⭐⭐ |
+| [视频内容分析](./02-media-operations/video-analysis.md) | 内容分析 | ⭐⭐⭐ | ⭐⭐⭐ |
+| [评论区金句回复](./02-media-operations/comment-reply.md) | 用户互动 | ⭐⭐ | ⭐⭐⭐ |
 
 ## 🛠️ 工具辅助类
 
@@ -68,10 +68,10 @@ sidebarTitle: 指令分类
 
 | 指令名称 | 功能描述 | 难度等级 | 推荐指数 |
 |---------|---------|---------|---------|
-| [文案违禁词审查](./07-tools/内容审核.md) | 内容合规检查 | ⭐ | ⭐⭐⭐⭐ |
-| [文字排版指令](./07-tools/文本格式化.md) | 排版优化 | ⭐ | ⭐⭐⭐ |
-| [播客整理助手](./07-tools/播客整理器.md) | 音频内容整理 | ⭐⭐ | ⭐⭐⭐ |
-| [赛道关键词组合](./07-tools/关键词组合.md) | 关键词策略 | ⭐⭐ | ⭐⭐⭐ |
+| [文案违禁词审查](./07-tools/content-review.md) | 内容合规检查 | ⭐ | ⭐⭐⭐⭐ |
+| [文字排版指令](./07-tools/text-formatting.md) | 排版优化 | ⭐ | ⭐⭐⭐ |
+| [播客整理助手](./07-tools/podcast-organizer.md) | 音频内容整理 | ⭐⭐ | ⭐⭐⭐ |
+| [赛道关键词组合](./07-tools/keyword-combination.md) | 关键词策略 | ⭐⭐ | ⭐⭐⭐ |
 | [Ollama模型迁移教程](./../tutorials/01-ai-tools/02-ai-tools/04-ollama-migration.md) | Windows系统模型目录迁移 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 | [Ollama + DeepSeek完整部署](./../tutorials/01-ai-tools/02-ai-tools/03-ollama-deepseek.md) | Windows下AI模型完整部署方案 | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 
@@ -81,9 +81,9 @@ sidebarTitle: 指令分类
 
 | 指令名称 | 适用场景 | 难度等级 | 推荐指数 |
 |---------|---------|---------|---------|
-| [记忆宫殿背课文](./06-education-learning/记忆宫殿.md) | 记忆学习 | ⭐⭐⭐ | ⭐⭐⭐⭐ |
-| [单词记忆指令](./06-education-learning/单词记忆.md) | 英语学习 | ⭐⭐ | ⭐⭐⭐ |
-| [AI生成PPT](./06-education-learning/AI制作PPT.md) | 演示制作 | ⭐⭐ | ⭐⭐⭐⭐ |
+| [记忆宫殿背课文](./06-education-learning/memory-palace.md) | 记忆学习 | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| [单词记忆指令](./06-education-learning/vocabulary-memory.md) | 英语学习 | ⭐⭐ | ⭐⭐⭐ |
+| [AI生成PPT](./06-education-learning/ai-ppt-creation.md) | 演示制作 | ⭐⭐ | ⭐⭐⭐⭐ |
 | [Java编程语言完整指南](./../tutorials/00-dev-ops/01-java-guide/) | 编程学习 | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 
 ## 🎯 品牌营销类
@@ -92,7 +92,7 @@ sidebarTitle: 指令分类
 
 | 指令名称 | 适用场景 | 难度等级 | 推荐指数 |
 |---------|---------|---------|---------|
-| [打造个人IP文案](./04-brand-marketing/个人IP文案指令.md) | 个人品牌 | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| [打造个人IP文案](./04-brand-marketing/personal-branding.md) | 个人品牌 | ⭐⭐⭐ | ⭐⭐⭐⭐ |
 
 ---
 
@@ -100,21 +100,21 @@ sidebarTitle: 指令分类
 
 ### 新手推荐
 如果你是第一次使用AI写作指令，建议从以下几个简单易用的指令开始：
-- [情绪化爆款标题](./01-marketing-promotion/情感标题.md)
-- [文案违禁词审查](./07-tools/内容审核.md)
-- [单词记忆指令](./06-education-learning/单词记忆.md)
+- [情绪化爆款标题](./01-marketing-promotion/emotional-titles.md)
+- [文案违禁词审查](./07-tools/content-review.md)
+- [单词记忆指令](./06-education-learning/vocabulary-memory.md)
 
 ### 进阶使用
 有一定经验后，可以尝试这些更复杂的指令：
-- [AI写小说](./00-content-creation/AI写小说指令.md)
-- [教案写作指令](./05-professional-skills/教案写作指令.md)
-- [对标博主账号拆解](./02-media-operations/对标博主账号拆解指令.md)
+- [AI写小说](./00-content-creation/ai-novel-writing.md)
+- [教案写作指令](./05-professional-skills/lesson-plan.md)
+- [对标博主账号拆解](./02-media-operations/blogger-analysis.md)
 
 ### 专业应用
 对于专业用户，推荐这些高级指令：
-- [公文写作指令](./05-professional-skills/公文写作指令.md)
-- [英文文献阅读](./05-professional-skills/英文文献阅读.md)
-- [项目复盘报告](./05-professional-skills/项目复盘报告.md)
+- [公文写作指令](./05-professional-skills/official-document.md)
+- [英文文献阅读](./05-professional-skills/english-literature.md)
+- [项目复盘报告](./05-professional-skills/project-retrospective.md)
 
 ::: tip 💡 使用技巧
 1. **个性化调整**: 根据你的具体需求调整指令中的参数
