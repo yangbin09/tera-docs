@@ -7,6 +7,9 @@ import fs from 'fs'
 import path from 'path'
 
 const siteUrl = 'https://wynlx.cn'
+const siteTitle = 'AI写作指令集合'
+const siteDescription = '包含各种AI写作指令和教程的文档集合，涵盖多种写作场景和应用'
+const defaultOgImage = '/og-image.png'
 const legacySitemapPaths = [
   '/articles/automated-blog/',
   '/articles/blog-automation-guide/',
@@ -115,9 +118,71 @@ function renderSearchContent(src, env, md) {
   return env.frontmatter?.search === false || env.frontmatter?.sidebarExclude ? '' : html
 }
 
+function getCleanPath(relativePath) {
+  let pagePath = relativePath.replace(/\\/g, '/')
+  if (pagePath === 'index.md') {
+    pagePath = ''
+  } else if (pagePath.endsWith('/index.md')) {
+    pagePath = pagePath.slice(0, -'index.md'.length)
+  } else {
+    pagePath = pagePath.replace(/\.md$/, '')
+  }
+  return `/${pagePath}`.replace(/\/+/g, '/')
+}
+
+function getPageUrl(pageData) {
+  return new URL(getCleanPath(pageData.relativePath), siteUrl).href
+}
+
+function getAbsoluteUrl(url) {
+  return new URL(url || defaultOgImage, siteUrl).href
+}
+
+function getPageImage(frontmatter) {
+  return getAbsoluteUrl(frontmatter.ogImage || frontmatter.image || defaultOgImage)
+}
+
+function getPageDescription(pageData, fallbackDescription) {
+  return pageData.frontmatter.description || fallbackDescription || siteDescription
+}
+
+function getPageTitle(pageData) {
+  return pageData.frontmatter.ogTitle || pageData.title || siteTitle
+}
+
+function createCleanUrlAliases(outDir) {
+  let count = 0
+
+  function walk(dir) {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const entryPath = path.join(dir, entry.name)
+      if (entry.isDirectory()) {
+        walk(entryPath)
+        continue
+      }
+      if (!entry.isFile() || !entry.name.endsWith('.html') || entry.name === 'index.html' || entry.name === '404.html') {
+        continue
+      }
+
+      const aliasDir = path.join(dir, entry.name.slice(0, -'.html'.length))
+      const aliasFile = path.join(aliasDir, 'index.html')
+      if (fs.existsSync(aliasFile)) {
+        continue
+      }
+
+      fs.mkdirSync(aliasDir, { recursive: true })
+      fs.copyFileSync(entryPath, aliasFile)
+      count += 1
+    }
+  }
+
+  walk(outDir)
+  return count
+}
+
 export default withMermaid(defineConfig({
-  title: 'AI写作指令集合',
-  description: '包含各种AI写作指令和教程的文档集合，涵盖多种写作场景和应用',
+  title: siteTitle,
+  description: siteDescription,
   srcDir: 'docs',
   ignoreDeadLinks: true,
 
@@ -126,6 +191,43 @@ export default withMermaid(defineConfig({
     transformItems(items) {
       return items.filter((item) => !isLegacySitemapPath(item.url))
     }
+  },
+
+  transformPageData(pageData) {
+    if (pageData.frontmatter.description) {
+      return {
+        description: pageData.frontmatter.description
+      }
+    }
+  },
+
+  transformHead({ pageData, description }) {
+    const frontmatter = pageData.frontmatter
+    const title = getPageTitle(pageData)
+    const pageDescription = getPageDescription(pageData, description)
+    const pageUrl = getPageUrl(pageData)
+    const pageImage = getPageImage(frontmatter)
+    const ogType = frontmatter.ogType || (pageData.relativePath === 'index.md' ? 'website' : 'article')
+
+    return [
+      ['link', { rel: 'canonical', href: pageUrl }],
+      ['meta', { property: 'og:type', content: ogType }],
+      ['meta', { property: 'og:locale', content: 'zh-CN' }],
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:site_name', content: siteTitle }],
+      ['meta', { property: 'og:description', content: pageDescription }],
+      ['meta', { property: 'og:url', content: pageUrl }],
+      ['meta', { property: 'og:image', content: pageImage }],
+      ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+      ['meta', { name: 'twitter:title', content: title }],
+      ['meta', { name: 'twitter:description', content: pageDescription }],
+      ['meta', { name: 'twitter:image', content: pageImage }]
+    ]
+  },
+
+  buildEnd(siteConfig) {
+    const count = createCleanUrlAliases(siteConfig.outDir)
+    console.log(`Generated ${count} clean URL alias pages.`)
   },
 
   vite: {
@@ -198,19 +300,7 @@ export default withMermaid(defineConfig({
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'theme-color', content: '#3c82f6' }],
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:locale', content: 'zh-CN' }],
-    ['meta', { property: 'og:title', content: 'AI写作指令集合' }],
-    ['meta', { property: 'og:site_name', content: 'AI写作指令集合' }],
-    ['meta', { property: 'og:description', content: '包含各种AI写作指令和教程的文档集合，涵盖多种写作场景和应用' }],
-    ['meta', { property: 'og:url', content: siteUrl }],
-    ['meta', { property: 'og:image', content: `${siteUrl}/og-image.png` }],
-    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:title', content: 'AI写作指令集合' }],
-    ['meta', { name: 'twitter:description', content: '包含各种AI写作指令和教程的文档集合，涵盖多种写作场景和应用' }],
-    ['meta', { name: 'twitter:image', content: `${siteUrl}/og-image.png` }],
-    ['script', {}, `(()=>{const{pathname:p,search:s,hash:h}=location;if(p==='/login.html'||p==='/login'){const r=new URLSearchParams(s).get('redirect')||'/';location.replace(r);return}const last=p.split('/').pop();if(!p.endsWith('/')&&last&&!last.includes('.'))location.replace(p+'.html'+s+h)})()`]
+    ['meta', { name: 'theme-color', content: '#3c82f6' }]
   ],
 
   lang: 'zh-CN',
