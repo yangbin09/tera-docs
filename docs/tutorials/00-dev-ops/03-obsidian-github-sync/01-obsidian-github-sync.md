@@ -3,171 +3,361 @@ title: Obsidian GitHub Sync 配置
 sidebarTitle: Obsidian Sync
 
 ---
+# Obsidian 配置 Obsidian-GitHub-Sync 同步教程
 
-# Obsidian 配置 `Obsidian-GitHub-Sync
-
-
-
-本教程将带您完成从零开始到成功同步的所有配置。
-
-#### **第一部分：GitHub 准备工作 (创建云端仓库和“钥匙”)**
-
-在这一步，我们将在 GitHub 网站上完成所有准备工作。
-
-**1. 创建一个私有的 GitHub 仓库 (您的云端保险箱)**
-
-这个仓库将用来存放您所有的笔记文件。设为私有后，只有您自己能看到。
-
-- **操作地址**: **[https://github.com/new](https://github.com/new)**
-    
-- **步骤**:
-    
-    1. 点击上面的链接，登录您的 GitHub 账户。
-        
-    2. **Repository name (仓库名)**: 填写一个您容易记住的名字，例如 `my-obsidian-notes`。
-        
-    3. **Description (描述)**: (可选) 可以写 `My personal notes backup`。
-        
-    4. **Public / Private**: **请务必、务必选择 `Private` (私有)**。这是保护您笔记隐私最关键的一步。
-        
-    5. **不要勾选** "Add a README file", "Add .gitignore", "Choose a license" 这些选项。我们希望创建一个完全空的仓库，以便于和您本地的笔记库对接。
-        
-    6. 点击绿色的 **"Create repository"** 按钮。
-        
-
-**2. 生成个人访问令牌 (Personal Access Token - PAT，您的“应用专用密码”)**
-
-这个令牌是给 Obsidian 插件的“钥匙”，让它有权限访问您刚才创建的私有仓库。
-
-- **操作地址**: **[https://github.com/settings/tokens/new](https://github.com/settings/tokens/new)**
-    
-- **步骤**:
-    
-    1. 点击上面的链接，如果需要，请再次确认您的 GitHub 密码。
-        
-    2. 系统可能会询问您选择 "Fine-grained tokens" 还是 "Tokens (classic)"。为了确保对插件的最大兼容性，请选择 **"Generate new token (classic)"**。
-        
-    3. **Note (备注)**: 给这个令牌起个名字，以便您知道它的用途，例如 `Obsidian-Sync-Key`。
-        
-    4. **Expiration (有效期)**: 为了方便，您可以选择 **"No expiration" (永不过期)**。但请注意，从安全角度出发，定期更换令牌是更好的习惯。
-        
-    5. **Select scopes (选择权限范围)**: 这是最重要的一步。请**勾选 `repo` 这个选项**。勾选它之后，它下面的所有子选项 (`repo:status`, `repo_deployment` 等) 都会被自动选中。这赋予了令牌对仓库的完全读写权限。
-        
-    6. 滚动到页面底部，点击绿色的 **"Generate token"** 按钮。
-        
-    7. **！！！立即复制并保存生成的令牌！！！**
-        
-        - 这个令牌（一长串以 `ghp_` 开头的字符）**只会出现这一次**。页面刷新或关闭后将永远无法再次查看。
-            
-        - 请将它复制到一个临时的、安全的地方（例如您的密码管理器或一个临时文本文档），我们马上就会用到它。
-            
-
-至此，所有在 GitHub 网站上的操作都已完成。
+> 本教程将带你完成 Obsidian 笔记同步到 GitHub 私有仓库的配置。  
+> 适合想要免费备份 Obsidian 笔记、并希望自己掌控数据的用户。
 
 ---
 
-#### **第二部分：Obsidian 内部准备 (安装插件的“安装器”)**
+## 一、准备工作
 
-由于 `Obsidian-GitHub-Sync` 插件未上架官方市场，我们需要先安装一个名为 BRAT 的“插件安装器”。
+开始前，请先准备好：
 
-- **相关信息地址 (供参考)**: [BRAT 插件官方页面](https://www.google.com/search?q=https://obsidian.md/plugins%3Fid%3Dobsidian42-brat)
-    
-- **步骤**:
-    
-    1. 打开您的 Obsidian 应用。
-        
-    2. 点击左下角的 **齿轮图标** 进入 **"Settings" (设置)**。
-        
-    3. 在左侧菜单中选择 **"Community plugins" (社区插件)**。
-        
-    4. 确保 **"Restricted mode" (安全模式)** 是 **关闭 (Off)** 状态。如果不是，请点击 "Turn on community plugins" 将其关闭。
-        
-    5. 点击 **"Browse" (浏览)** 按钮，打开社区插件市场。
-        
-    6. 在顶部的搜索框中输入 `BRAT`。
-        
-    7. 在搜索结果中找到 **"Obsidian 42 - BRAT"**，点击它。
-        
-    8. 点击 **"Install" (安装)**，等待安装完成。
-        
-    9. 点击 **"Enable" (启用)**，激活 BRAT 插件。
-        
+|准备项|说明|
+|---|---|
+|GitHub 账号|用来创建私有仓库|
+|Obsidian|已安装并有自己的笔记库|
+|网络环境|能正常访问 GitHub|
+|GitHub Token|后面会生成，用于插件同步|
+
+整体流程如下：
+
+```text
+创建 GitHub 私有仓库
+        ↓
+生成 GitHub Token
+        ↓
+安装 BRAT 插件
+        ↓
+安装 Obsidian-GitHub-Sync
+        ↓
+填写配置并同步
+```
 
 ---
 
-#### **第三部分：安装 `Obsidian-GitHub-Sync` 插件本体**
+# 第一部分：创建 GitHub 私有仓库
 
-现在，我们用刚刚装好的 BRAT 来安装主角 `Obsidian-GitHub-Sync`。
+GitHub 仓库可以理解为你的“云端笔记备份空间”。
 
-- **插件项目地址 (供参考)**: [https://github.com/kevinmkchin/Obsidian-GitHub-Sync](https://github.com/kevinmkchin/Obsidian-GitHub-Sync)
-    
-- **步骤**:
-    
-    1. 回到 Obsidian 的 **"Settings" (设置)** 页面。
-        
-    2. 在左侧菜单中，向下滚动，在 "COMMUNITY PLUGINS" 分类下找到并点击 **"Obsidian 42 - BRAT"**。
-        
-    3. 在 BRAT 的设置页面中，点击 **"Add Beta plugin"** 按钮。
-        
-    4. 会弹出一个输入框，要求您输入 GitHub repository。请**完整、准确地**复制并粘贴以下地址：
-        
-        ```
-        kevinmkchin/Obsidian-GitHub-Sync
-        ```
-        
-    5. 点击 **"Add Plugin"**。BRAT 会开始下载并安装。
-        
-    6. 安装成功后，通常会弹出一个提示，告诉您需要手动启用插件。
-        
-    7. 回到 **"Settings" -> "Community plugins"**，您应该可以在列表中看到一个名为 **"GitHub Sync"** 的新插件。**点击它右侧的开关，启用它**。
-        
+打开地址：
+
+```text
+https://github.com/new
+```
+
+进入页面后，按下面配置：
+
+|配置项|推荐填写|
+|---|---|
+|Repository name|`my-obsidian-notes`|
+|Description|可不填|
+|Public / Private|选择 `Private`|
+|Add README|不勾选|
+|Add .gitignore|不选择|
+|Choose a license|不选择|
+
+注意：一定要选择 **Private**，否则你的笔记可能会被公开访问。
+
+![[Pasted image 20260529202819.png]]
+
+配置完成后，点击：
+
+```text
+Create repository
+```
+
+创建一个空的私有仓库。
 
 ---
 
-#### **第四部分：核心配置与首次同步**
+# 第二部分：生成 GitHub Token
 
-这是最后一步，将所有信息串联起来。
+插件需要一个 GitHub Token，才能把 Obsidian 笔记上传到你的私有仓库。
 
-1. 在 Obsidian **"Settings" (设置)** 页面的左侧菜单，向下滚动，在 "PLUGIN OPTIONS" 分类下找到并点击 **"GitHub Sync"**。
-    
-2. **请逐一填写以下字段**:
-    
-    - **Username**: 您的 GitHub 用户名。例如，如果您的 GitHub 主页是 `github.com/my-awesome-user`，那么这里就填 `my-awesome-user`。
-        
-    - **Repository Name**: 您在第一部分创建的仓库名。例如，`my-obsidian-notes`。（注意：这里**只填仓库名**，不要填完整的 URL）
-        
-    - **Personal Access Token**: 粘贴您在第一部分第2步保存好的、以 `ghp_` 开头的**那一长串令牌**。
-        
-    - **Main Branch Name**: 填写您的仓库主分支名称。现在 GitHub 新建仓库默认都是 `main`。您可以在 GitHub 仓库页面确认。
-        
-3. **配置自动化选项 (强烈推荐)**:
-    
-    - **Sync on Startup**: 勾选。这样每次打开 Obsidian 都会先从云端拉取最新笔记，防止冲突。
-        
-    - **Periodic Sync (minutes)**: 设置一个自动同步的分钟数，例如 `10` 或 `15`。这样您在写作时，插件会每隔10或15分钟自动在后台为您备份。
-        
-4. **进行首次手动同步**:
-    
-    - 关闭设置页面。
-        
-    - 按下快捷键 `Cmd + P` (macOS) 或 `Ctrl + P` (Windows) 打开命令面板。
-        
-    - 输入 `sync`，找到并点击命令 **"GitHub Sync: Create a backup of your vault"**。
-        
-    - 执行命令后，请稍等片刻。插件会将您本地的所有笔记文件打包，并推送到您在 GitHub 上的私有仓库。
-        
+打开地址：
 
-#### **第五部分：如何验证配置是否成功**
+```text
+https://github.com/settings/tokens/new
+```
 
-1. **在 Obsidian 中**: 留意 Obsidian 窗口右下角的状态栏。在同步进行时，可能会出现 "GitHub Sync: Pushing to remote..." 之类的提示。同步成功后，提示会消失或显示成功信息。
-    
-2. **在 GitHub 上**:
-    
-    - 回到您浏览器的 GitHub 页面，进入您创建的那个私有仓库 (例如 `https://github.com/your-username/my-obsidian-notes`)。
-        
-    - **刷新页面**。
-        
-    - 如果配置成功，您会看到您 Obsidian 笔记库里的所有文件夹和 `.md` 文件都已出现在了这里。
-        
+建议选择：
 
-恭喜您！到这里，您的 Obsidian 笔记已经拥有了强大的、免费的、私密的云端版本控制和同步能力。
+```text
+Generate new token classic
+```
+
+然后填写：
+
+|配置项|推荐填写|
+|---|---|
+|Note|`Obsidian-Sync-Key`|
+|Expiration|`No expiration`|
+|Select scopes|勾选 `repo`|
+
+其中最重要的是勾选：
+
+```text
+repo
+```
+
+这个权限允许插件读写你的私有仓库。
+
+![[Pasted image 20260529202900.png]]
+
+点击页面底部：
+
+```text
+Generate token
+```
+
+生成后，请立刻复制保存。
+
+注意：Token 只会显示一次，关闭页面后就看不到了。
+
+
+
+---
+
+# 第三部分：安装 BRAT 插件
+
+因为 `Obsidian-GitHub-Sync` 没有上架 Obsidian 官方插件市场，所以需要先安装 BRAT。
+
+打开 Obsidian，进入：
+
+```text
+Settings -> Community plugins
+```
+
+如果看到 `Restricted mode`，需要先关闭限制模式，启用社区插件。
+
+然后点击：
+
+```text
+Browse
+```
+
+搜索：
+
+```text
+BRAT
+```
+
+找到：
+
+```text
+Obsidian 42 - BRAT
+```
+
+点击：
+
+```text
+Install
+```
+
+安装完成后，再点击：
+
+```text
+Enable
+```
+
+启用插件。
+
+![[Pasted image 20260529202950.png]]
+
+
+![[Pasted image 20260529203447.png]]
+---
+
+# 第四部分：安装 Obsidian-GitHub-Sync
+
+BRAT 安装完成后，回到：
+
+```text
+Settings -> Obsidian 42 - BRAT
+```
+
+点击：
+
+```text
+Add Beta plugin
+```
+
+在输入框中填写：
+
+```text
+kevinmkchin/Obsidian-GitHub-Sync
+```
+
+然后点击：
+
+```text
+Add Plugin
+```
+
+等待插件安装完成。
+
+![[Pasted image 20260529203439.png]]
+
+![[Pasted image 20260529203619.png]]
+安装完成后，回到：
+
+```text
+Settings -> Community plugins
+```
+
+找到：
+
+```text
+GitHub Sync
+```
+
+点击右侧开关，启用插件。
+
+![[Pasted image 20260529203640.png]]
+
+---
+
+# 第五部分：配置 GitHub Sync
+
+进入：
+
+```text
+Settings -> GitHub Sync
+```
+
+按下面填写：
+
+|字段|填写内容|示例|
+|---|---|---|
+|Username|GitHub 用户名|`your-name`|
+|Repository Name|仓库名|`my-obsidian-notes`|
+|Personal Access Token|刚才生成的 Token|`ghp_xxxxx`|
+|Main Branch Name|主分支名称|`main`|
+
+注意：
+
+- `Username` 填 GitHub 用户名，不是邮箱；
+    
+- `Repository Name` 只填仓库名，不要填完整链接；
+    
+- `Personal Access Token` 不要多复制空格；
+    
+- 新建 GitHub 仓库默认分支一般是 `main`。
+    
+
+
+---
+
+## 推荐开启自动同步
+
+建议开启以下配置：
+
+|配置项|推荐值|
+|---|---|
+|Sync on Startup|开启|
+|Periodic Sync|10 或 15 分钟|
+
+这样每次打开 Obsidian 时会自动同步，平时也会定时备份。
+
+
+
+---
+
+# 第六部分：执行首次同步
+
+配置完成后，先手动同步一次。
+
+打开命令面板：
+
+|系统|快捷键|
+|---|---|
+|Windows|`Ctrl + P`|
+|macOS|`Cmd + P`|
+
+输入：
+
+```text
+sync
+```
+
+找到命令：
+
+```text
+GitHub Sync: Create a backup of your vault
+```
+
+点击执行。
+
+插件会把你的 Obsidian 笔记上传到 GitHub 私有仓库。
+
+
+
+---
+
+# 第七部分：验证是否成功
+
+打开你的 GitHub 仓库页面，例如：
+
+```text
+https://github.com/your-name/my-obsidian-notes
+```
+
+刷新页面。
+
+如果看到 Obsidian 笔记库里的文件夹和 `.md` 文件，说明同步成功。
+
+
+---
+
+# 常见问题
+
+## 1. GitHub 上没有文件怎么办？
+
+优先检查：
+
+- 仓库名是否只填了名称；
+    
+- GitHub 用户名是否正确；
+    
+- Token 是否复制完整；
+    
+- Token 是否勾选了 `repo` 权限；
+    
+- 分支名是否是 `main`。
+    
+
+---
+
+## 2. 提示权限错误怎么办？
+
+一般是 Token 配置有问题。
+
+解决方法：
+
+1. 重新生成 classic token；
+    
+2. 勾选 `repo` 权限；
+    
+3. 回到 Obsidian 重新粘贴 Token；
+    
+4. 再执行一次同步。
+    
+
+---
+
+## 3. 多设备同步要注意什么？
+
+建议养成这个习惯：
+
+```text
+打开 Obsidian 后先同步
+写完笔记后再同步
+换设备前确认已同步完成
+```
+
+不要在两台设备上同时编辑同一个文件，否则可能产生冲突。
+
+---
+

@@ -35,21 +35,21 @@ AI读书会成员的精彩分享与讨论。
 
 ### 1019创业主题分享
 
-- [01 开场白](./ai-book-club/1019-startup/01-opening-speech.md) - 会长开场介绍
-- [02 自我介绍](./ai-book-club/1019-startup/02-self-introduction.md) - 成员自我介绍
-- [03 Macan的创业观](./ai-book-club/1019-startup/03-macan-startup-views.md) - 关于创业的思考
-- [04 奇妙的创业观](./ai-book-club/1019-startup/04-qiaomiao-startup-views.md) - 创业的看法
-- [05 家豪的创业观](./ai-book-club/1019-startup/05-jiahao-startup-views.md) - 创业的见解
-- [06 小阳的创业观](./ai-book-club/1019-startup/06-xiaoyang-startup-views.md) - 创业的理解
-- [07 J King分享](./ai-book-club/1019-startup/07-jking-zhou-sharing.md) - 经验分享
-- [08 钟佳楷的创业观](./ai-book-club/1019-startup/08-zhongjiakai-startup-views.md) - 创业的想法
-- [09 林小晗的创业观](./ai-book-club/1019-startup/09-linxiaohan-startup-views.md) - 创业的观点
-- [10 马晓颖的创业观](./ai-book-club/1019-startup/10-maxiaoying-startup-views.md) - 创业的感悟
-- [11 东东的创业观](./ai-book-club/1019-startup/11-dongdong-startup-views.md) - 创业的经历
+- [01 开场白](ai-book-club/01-opening-speech.md) - 会长开场介绍
+- [02 自我介绍](ai-book-club/02-self-introduction.md) - 成员自我介绍
+- [03 Macan的创业观](ai-book-club/03-macan-startup-views.md) - 关于创业的思考
+- [04 奇妙的创业观](ai-book-club/04-qiaomiao-startup-views.md) - 创业的看法
+- [05 家豪的创业观](ai-book-club/05-jiahao-startup-views.md) - 创业的见解
+- [06 小阳的创业观](ai-book-club/06-xiaoyang-startup-views.md) - 创业的理解
+- [07 J King分享](ai-book-club/07-jking-zhou-sharing.md) - 经验分享
+- [08 钟佳楷的创业观](ai-book-club/08-zhongjiakai-startup-views.md) - 创业的想法
+- [09 林小晗的创业观](ai-book-club/09-linxiaohan-startup-views.md) - 创业的观点
+- [10 马晓颖的创业观](ai-book-club/10-maxiaoying-startup-views.md) - 创业的感悟
+- [11 东东的创业观](ai-book-club/11-dongdong-startup-views.md) - 创业的经历
 
 ### 创业实战复盘
 
-- [咖啡创业实战复盘手册](./ai-book-club/from-career-breakthrough-to-chain-scaling.md) - 从职场突围到连锁裂变
+- [咖啡创业实战复盘手册](ai-book-club/from-career-breakthrough-to-chain-scaling.md) - 从职场突围到连锁裂变
 
 ---
 

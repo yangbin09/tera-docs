@@ -3,7 +3,7 @@ title: 03 Macan 关于创业看法
 sidebarTitle: Macan 创业观
 ---
 
-## 03 Macan 关于创业看法
+# 03 Macan 关于创业看法
 
 （Macan）
 
