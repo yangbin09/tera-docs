@@ -6,7 +6,7 @@ import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-in
 import fs from 'fs'
 import path from 'path'
 
-const siteUrl = 'http://wynlx.cn'
+const siteUrl = 'https://wynlx.cn'
 const legacySitemapPaths = [
   '/articles/automated-blog/',
   '/articles/blog-automation-guide/',
