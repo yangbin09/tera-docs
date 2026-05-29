@@ -83,7 +83,7 @@ launcher.bat
 ```
 
 后续所有操作都从它开始。
-![](attachments/01-file-structure.png)
+![](./image/01-01.png)
 ---
 
 ## 三、启动工具
@@ -96,7 +96,7 @@ launcher.bat
 
 然后双击运行。
 
-![](attachments/02-launcher-doubleclick.png)
+![](./image/01-02.png)
 
 双击后，会打开一个命令行窗口，显示主菜单。
 
@@ -156,7 +156,7 @@ launcher.bat
     
 - 必要文件是否完整
     
-![](attachments/03-environment-check.png)
+![](./image/01-03.png)
 ---
 
 ## 五、确认检查结果
@@ -247,7 +247,7 @@ DEEPSEEK_API_KEY=sk-1234567890abcdef
 注意：`=` 前面的内容不要改，只改 `=` 后面的内容。
 
 ---
-![](attachments/04-config-edit.png)
+![](./image/01-04.png)
 ## 八、重要注意事项
 
 这里非常关键，很多人配置失败都是因为这一步写错了。
@@ -384,7 +384,7 @@ Ctrl + S
 该选项会使用刚才配置好的 DeepSeek Key 启动 Provider 模式，并测试是否可以正常调用模型。
 
 
-![](attachments/05-deepseek-test.png)
+![](./image/01-05.png)
 ---
 
 ## 十一、正常启动效果
