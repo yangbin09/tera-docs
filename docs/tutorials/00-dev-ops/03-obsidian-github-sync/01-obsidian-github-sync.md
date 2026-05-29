@@ -60,7 +60,7 @@ https://github.com/new
 
 注意：一定要选择 **Private**，否则你的笔记可能会被公开访问。
 
-![[Pasted image 20260529202819.png]]
+![](./image/01.png)
 
 配置完成后，点击：
 
@@ -104,7 +104,7 @@ repo
 
 这个权限允许插件读写你的私有仓库。
 
-![[Pasted image 20260529202900.png]]
+![](./image/02.png)
 
 点击页面底部：
 
@@ -164,10 +164,10 @@ Enable
 
 启用插件。
 
-![[Pasted image 20260529202950.png]]
+![](./image/03.png)
 
 
-![[Pasted image 20260529203447.png]]
+![](./image/04.png)
 ---
 
 # 第四部分：安装 Obsidian-GitHub-Sync
@@ -198,9 +198,9 @@ Add Plugin
 
 等待插件安装完成。
 
-![[Pasted image 20260529203439.png]]
+![](./image/05.png)
 
-![[Pasted image 20260529203619.png]]
+![](./image/06.png)
 安装完成后，回到：
 
 ```text
@@ -215,7 +215,7 @@ GitHub Sync
 
 点击右侧开关，启用插件。
 
-![[Pasted image 20260529203640.png]]
+![](./image/07.png)
 
 ---
 
