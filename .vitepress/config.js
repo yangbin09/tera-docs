@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import { generateSidebar } from 'vitepress-sidebar'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+import { InlineLinkPreviewElementTransform } from '@nolebase/vitepress-plugin-inline-link-preview/markdown-it'
 import fs from 'fs'
 import path from 'path'
 
@@ -209,6 +210,7 @@ export default withMermaid(defineConfig({
     theme: { light: 'github-light', dark: 'github-dark' },
     config(md) {
       md.use(groupIconMdPlugin)
+      md.use(InlineLinkPreviewElementTransform)
     }
   },
 

@@ -21,7 +21,7 @@ sidebarTitle: 00 内容创作
 
 - [爆款短视频脚本](./short-video-script.md) - 创作适合各平台的爆款短视频脚本
 - [长文章变口播文案](./article-to-voice.md) - 将长文章转化成适合短视频口播的文案
-- [小红书爆款文案](./xiaohongshu-viral.md) - 小红书平台爆款文案创作
+- [小红书爆款文案](../01-marketing-promotion/xiaohongshu-viral.md) - 小红书平台爆款文案创作
 
 ## ✍️ 仿写创作
 
