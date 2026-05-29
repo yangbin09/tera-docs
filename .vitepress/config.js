@@ -131,7 +131,9 @@ function getCleanPath(relativePath) {
 }
 
 function getPageUrl(pageData) {
-  return new URL(getCleanPath(pageData.relativePath), siteUrl).href
+  const cleanPath = getCleanPath(pageData.relativePath)
+  const canonicalPath = cleanPath === '/' || cleanPath.endsWith('/') ? cleanPath : `${cleanPath}.html`
+  return new URL(canonicalPath, siteUrl).href
 }
 
 function getAbsoluteUrl(url) {
@@ -150,7 +152,7 @@ function getPageTitle(pageData) {
   return pageData.frontmatter.ogTitle || pageData.title || siteTitle
 }
 
-function createCleanUrlFiles(outDir) {
+function createCleanUrlAliases(outDir) {
   let count = 0
 
   function walk(dir) {
@@ -164,12 +166,14 @@ function createCleanUrlFiles(outDir) {
         continue
       }
 
-      const cleanUrlFile = path.join(dir, entry.name.slice(0, -'.html'.length))
-      if (fs.existsSync(cleanUrlFile)) {
+      const aliasDir = path.join(dir, entry.name.slice(0, -'.html'.length))
+      const aliasFile = path.join(aliasDir, 'index.html')
+      if (fs.existsSync(aliasFile)) {
         continue
       }
 
-      fs.copyFileSync(entryPath, cleanUrlFile)
+      fs.mkdirSync(aliasDir, { recursive: true })
+      fs.copyFileSync(entryPath, aliasFile)
       count += 1
     }
   }
@@ -292,9 +296,9 @@ export default withMermaid(defineConfig({
   },
 
   buildEnd(siteConfig) {
-    const cleanUrlCount = createCleanUrlFiles(siteConfig.outDir)
+    const cleanUrlCount = createCleanUrlAliases(siteConfig.outDir)
     const prioritizedMetaCount = moveShareMetaToHeadStart(siteConfig.outDir)
-    console.log(`Generated ${cleanUrlCount} clean URL files.`)
+    console.log(`Generated ${cleanUrlCount} clean URL alias pages.`)
     console.log(`Prioritized share meta in ${prioritizedMetaCount} HTML files.`)
   },
 
