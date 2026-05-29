@@ -1,3 +1,8 @@
+---
+title: 南岳衡山游记：山风替我，把心事吹慢了一点
+sidebarTitle: 衡山游记
+---
+
 # 南岳衡山游记：山风替我，把心事吹慢了一点
 
 ![南岳山下清晨烟火气](./article-images/01_nanyue_street_morning.webp)

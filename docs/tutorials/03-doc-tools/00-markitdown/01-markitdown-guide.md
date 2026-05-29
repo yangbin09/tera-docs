@@ -1,3 +1,8 @@
+---
+title: MarkItDown-MCP 使用说明
+sidebarTitle: MarkItDown 使用
+---
+
 # MarkItDown-MCP 使用说明
 
 ## 📖 概述

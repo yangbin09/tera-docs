@@ -1,3 +1,8 @@
+---
+title: AI生成PPT
+sidebarTitle: AI制作PPT
+---
+
 # AI生成PPT
 
 ## 1. 这个提示词能做什么
