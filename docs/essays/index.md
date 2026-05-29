@@ -1,5 +1,6 @@
 ---
 title: 随笔文集
+sidebarTitle: 随笔文集
 order: 1
 ---
 

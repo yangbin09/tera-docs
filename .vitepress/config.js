@@ -151,16 +151,14 @@ export default withMermaid(defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '指令分类', link: '/categories/' },
+      { text: '技术教程', link: '/tutorials/' },
       { text: '随笔文集', link: '/essays/' },
-      { text: 'AI技术', link: '/tools/' },
-      { text: '技术文章', link: '/articles/' },
       { text: 'GitHub', link: 'https://github.com/yangbin09/tera-docs' }
     ],
     sidebar: {
       '/categories/': generateSidebarWithCorrectPaths('/categories/', 'categories', { collapsed: false, collapseDepth: 3 }),
-      '/tools/': generateSidebarWithCorrectPaths('/tools/', 'tools', { collapsed: false, collapseDepth: 3 }),
-      '/essays/': generateSidebarWithCorrectPaths('/essays/', 'essays', { collapsed: false, collapseDepth: 5, excludeDirs: ['mp3', 'images', 'article-images'] }),
-      '/articles/': generateSidebarWithCorrectPaths('/articles/', 'articles', { collapsed: false, collapseDepth: 3 })
+      '/tutorials/': generateSidebarWithCorrectPaths('/tutorials/', 'tutorials', { collapsed: false, collapseDepth: 3 }),
+      '/essays/': generateSidebarWithCorrectPaths('/essays/', 'essays', { collapsed: false, collapseDepth: 5, excludeDirs: ['mp3', 'images', 'article-images'] })
     },
     search: {
       provider: 'local',

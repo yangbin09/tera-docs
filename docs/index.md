@@ -1,4 +1,6 @@
 ---
+title: AI写作指令集合
+sidebarTitle: 首页
 layout: home
 
 hero:
@@ -10,19 +12,19 @@ hero:
       text: 开始使用
       link: ./categories/
     - theme: alt
-      text: 查看工具
-      link: ./tools/
+      text: 查看教程
+      link: ./tutorials/
 
 features:
   - title: "📝 丰富的指令分类"
     details: "按照不同应用场景分类整理，包含写作、分析、创意等多个领域的专业指令"
     link: "/categories/"
-  - title: "🛠️ 实用工具集合"
-    details: "收录各类AI工具和开发工具，提供详细的使用说明和最佳实践"
-    link: "/tools/"
-  - title: "📚 技术文章分享"
+  - title: "🛠️ 技术教程"
+    details: "收录各类AI工具和开发教程，提供详细的使用说明和最佳实践"
+    link: "/tutorials/"
+  - title: "📚 随笔文集"
     details: "深入的技术文章和随笔，分享AI应用的经验和思考"
-    link: "/articles/"
+    link: "/essays/"
   - title: "📖 随笔文集"
     details: "支持全文搜索，快速找到你需要的指令和工具"
     link: "/essays/"
@@ -33,32 +35,32 @@ features:
 ### 📋 指令分类
 
 #### 🎯 专业应用
-- [专业技能](./categories/professional-skills/) - 教案写作、公文写作、项目复盘等专业场景指令
-- [内容创作](./categories/content-creation/) - AI写小说、散文创作、短视频脚本等创意写作指令
-- [媒体运营](./categories/media-operations/) - 头条文章、视频分析、评论回复等媒体运营指令
+- [专业技能](./categories/05-professional-skills/) - 教案写作、公文写作、项目复盘等专业场景指令
+- [内容创作](./categories/00-content-creation/) - AI写小说、散文创作、短视频脚本等创意写作指令
+- [媒体运营](./categories/02-media-operations/) - 头条文章、视频分析、评论回复等媒体运营指令
 
 #### 🚀 营销推广
-- [营销推广](./categories/marketing-promotion/) - 小红书爆款、广告文案、情感内容等营销类指令
-- [品牌营销](./categories/brand-marketing) - 个人IP文案等品牌建设指令
+- [营销推广](./categories/01-marketing-promotion/) - 小红书爆款、广告文案、情感内容等营销类指令
+- [品牌营销](./categories/04-brand-marketing/) - 个人IP文案等品牌建设指令
 
 #### 📚 学习教育
-- [教育学习](./categories/education-learning/) - PPT制作、编程指南、记忆方法等学习辅助指令
-- [实用工具](./categories/tools/) - 关键词组合、内容审核、文本格式化等工具类指令
+- [教育学习](./categories/06-education-learning/) - PPT制作、编程指南、记忆方法等学习辅助指令
+- [实用工具](./categories/07-tools/) - 关键词组合、内容审核、文本格式化等工具类指令
 
-### 🛠️ 工具集合
+### 🛠️ 技术教程
 
 #### 🤖 AI相关工具
-- [AI工具](./tools/ai-tools) - Chrome MCP服务器、Ollama部署、Claude配置等AI工具
-- [AI工具综合指南](./tools/ai-tools/ai-tools-guide) - 全面的AI工具使用说明和最佳实践
+- [AI工具](./tutorials/01-ai-tools/02-ai-tools/) - Chrome MCP服务器、Ollama部署、Claude配置等AI工具
+- [绘画提示词](./tutorials/01-ai-tools/00-image-prompts/) - Nano Banana Pro 等图像生成工具提示词
 
 #### 💻 开发与文档
-- [开发工具](./tools/dev-tools) - Dyad AI应用构建器等开发平台
-- [文档工具](./tools/doc-tools) - MarkItDown转换工具、批量处理脚本
-- [服务器工具](./tools/服务器工具) - CentOS安装、Nginx配置等服务器管理工具
+- [开发工具](./tutorials/00-dev-ops/05-dev-tools/) - Dyad AI应用构建器等开发平台
+- [文档工具](./tutorials/03-doc-tools/00-markitdown/) - MarkItDown转换工具、批量处理脚本
+- [服务器工具](./tutorials/00-dev-ops/06-server-tools/) - CentOS安装、Nginx配置等服务器管理工具
 
-### 📖 文章内容
-- [技术文章](./articles) - 深入的技术分析和教程
-- [随笔文集](./essays) - 个人思考和经验分享
+### 📖 其他内容
+- [技术教程](./tutorials/) - 深入的技术分析和教程
+- [随笔文集](./essays/) - 个人思考和经验分享
 
 ## 📖 使用说明
 
