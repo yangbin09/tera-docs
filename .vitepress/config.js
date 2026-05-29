@@ -150,7 +150,7 @@ function getPageTitle(pageData) {
   return pageData.frontmatter.ogTitle || pageData.title || siteTitle
 }
 
-function createCleanUrlAliases(outDir) {
+function createCleanUrlFiles(outDir) {
   let count = 0
 
   function walk(dir) {
@@ -164,19 +164,77 @@ function createCleanUrlAliases(outDir) {
         continue
       }
 
-      const aliasDir = path.join(dir, entry.name.slice(0, -'.html'.length))
-      const aliasFile = path.join(aliasDir, 'index.html')
-      if (fs.existsSync(aliasFile)) {
+      const cleanUrlFile = path.join(dir, entry.name.slice(0, -'.html'.length))
+      if (fs.existsSync(cleanUrlFile)) {
         continue
       }
 
-      fs.mkdirSync(aliasDir, { recursive: true })
-      fs.copyFileSync(entryPath, aliasFile)
+      fs.copyFileSync(entryPath, cleanUrlFile)
       count += 1
     }
   }
 
   walk(outDir)
+  return count
+}
+
+function getHtmlFiles(outDir) {
+  const files = []
+
+  function walk(dir) {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const entryPath = path.join(dir, entry.name)
+      if (entry.isDirectory()) {
+        walk(entryPath)
+        continue
+      }
+      if (!entry.isFile()) {
+        continue
+      }
+
+      const isHtml = entry.name.endsWith('.html')
+      const hasExtension = path.extname(entry.name) !== ''
+      if (isHtml || !hasExtension) {
+        files.push(entryPath)
+      }
+    }
+  }
+
+  walk(outDir)
+  return files
+}
+
+function moveShareMetaToHeadStart(outDir) {
+  let count = 0
+
+  for (const file of getHtmlFiles(outDir)) {
+    const html = fs.readFileSync(file, 'utf-8')
+    const blockStart = html.indexOf('    <link rel="canonical"')
+    const lastMetaStart = html.indexOf('    <meta name="twitter:image"', blockStart)
+    const titleEnd = html.indexOf('</title>')
+    if (blockStart === -1 || lastMetaStart === -1 || titleEnd === -1 || blockStart < titleEnd) {
+      continue
+    }
+
+    const blockEnd = html.indexOf('\n', lastMetaStart)
+    if (blockEnd === -1) {
+      continue
+    }
+
+    const shareMetaBlock = html.slice(blockStart, blockEnd + 1)
+    const withoutShareMeta = html.slice(0, blockStart) + html.slice(blockEnd + 1)
+    const insertAt = withoutShareMeta.indexOf('\n', titleEnd) + 1
+    if (insertAt === 0) {
+      continue
+    }
+
+    fs.writeFileSync(
+      file,
+      `${withoutShareMeta.slice(0, insertAt)}${shareMetaBlock}${withoutShareMeta.slice(insertAt)}`
+    )
+    count += 1
+  }
+
   return count
 }
 
@@ -218,6 +276,14 @@ export default withMermaid(defineConfig({
       ['meta', { property: 'og:description', content: pageDescription }],
       ['meta', { property: 'og:url', content: pageUrl }],
       ['meta', { property: 'og:image', content: pageImage }],
+      ['meta', { property: 'og:image:secure_url', content: pageImage }],
+      ['meta', { property: 'og:image:type', content: 'image/png' }],
+      ['meta', { property: 'og:image:width', content: '1200' }],
+      ['meta', { property: 'og:image:height', content: '630' }],
+      ['meta', { name: 'title', content: title }],
+      ['meta', { itemprop: 'name', content: title }],
+      ['meta', { itemprop: 'description', content: pageDescription }],
+      ['meta', { itemprop: 'image', content: pageImage }],
       ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
       ['meta', { name: 'twitter:title', content: title }],
       ['meta', { name: 'twitter:description', content: pageDescription }],
@@ -226,8 +292,10 @@ export default withMermaid(defineConfig({
   },
 
   buildEnd(siteConfig) {
-    const count = createCleanUrlAliases(siteConfig.outDir)
-    console.log(`Generated ${count} clean URL alias pages.`)
+    const cleanUrlCount = createCleanUrlFiles(siteConfig.outDir)
+    const prioritizedMetaCount = moveShareMetaToHeadStart(siteConfig.outDir)
+    console.log(`Generated ${cleanUrlCount} clean URL files.`)
+    console.log(`Prioritized share meta in ${prioritizedMetaCount} HTML files.`)
   },
 
   vite: {
