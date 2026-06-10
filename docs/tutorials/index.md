@@ -41,6 +41,16 @@ AI相关的工具使用和开发教程。
 
 - [MarkItDown](./03-doc-tools/00-markitdown/) - Markdown文档转换工具、图床方案
 
+## 🌐 [AI 网页制作](./04-ai-webpage/)
+
+用 AI 工具从零开始制作网页的全流程教程，从千问生成到正式上线。
+
+- [千问生成基础网页](./04-ai-webpage/01-qwen-basic-webpage) - 用千问把公众号文章转成网页
+- [Claude Code 加入图片](./04-ai-webpage/02-claude-code-assets) - 用 Claude Code 接入图片素材
+- [UX/UI 精修](./04-ai-webpage/03-uxmax-skill-polish) - 用 UX/UI Skill 打磨作品
+- [Netlify 部署](./04-ai-webpage/04-netlify-one-project-deploy) - 一键发布三个版本
+- [绑定正式域名](./04-ai-webpage/05-domain-dns-binding) - 域名解析和 HTTPS 配置
+
 ---
 
 💡 **学习建议**：建议按照自己的需求选择对应的教程，每个教程都包含详细的步骤说明和示例代码。
