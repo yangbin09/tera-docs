@@ -57,7 +57,7 @@ sidebarTitle: 01 千问生成基础网页
 千问这类对话式 AI 工具，适合做这个起点实验，原因有三个。
 https://www.qianwen.com/
 
-![[img-01-01.png]]
+![](img/img-01-01.png)
 
 ### 1. 入口简单
 
@@ -115,7 +115,7 @@ https://www.qianwen.com/
 
 比如趁早这篇文章
 
-![[img-01-02.png]]
+![](img/img-01-02.png)
 你也可以先不用管文件名，直接把下面这种要求告诉 AI：
 
 ```text
@@ -158,14 +158,14 @@ https://www.qianwen.com/
 ### 第 2 步：把文章和提示词发给千问
 
 打开千问，把提示词和文章正文一起发进去。
-![[img-01-03.png]]
+![](img/img-01-03.png)
 ---
 
 ### 第 3 步：复制 AI 生成的 HTML
 
 千问生成完成后，你会看到一大段 HTML 代码。
 
-![[img-01-04.png]]
+![](img/img-01-04.png)
 
 你要做的事情很简单：
 
@@ -229,4 +229,4 @@ v1.html.txt
 
 ---
 
-![[img-01-05.png]]
+![](img/img-01-05.png)

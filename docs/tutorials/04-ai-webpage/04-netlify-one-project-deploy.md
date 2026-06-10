@@ -30,7 +30,7 @@ sidebarTitle: 04 Netlify 部署
 
 一个 Netlify 项目就够了。
 
-![[img-04-01.png]]
+![](img/img-04-01.png)
 
 ---
 
@@ -188,7 +188,7 @@ https://curious-daffodil-2781ee.netlify.app/v3-uxmax-polished/
 先用 Netlify 自动生成的地址验证项目能不能正常访问。
 
 正式域名放到下一篇再绑定。
-![[img-04-02.png]]
+![](img/img-04-02.png)
 ---
 
 ## 四、加一个 netlify.toml
@@ -315,4 +315,4 @@ https://xiaoyangyx.top/
 ```
 
 到那一步，这个 AI 网页作品就真正可以作为正式链接对外分享了。
-![[img-04-03.png]]
+![](img/img-04-03.png)

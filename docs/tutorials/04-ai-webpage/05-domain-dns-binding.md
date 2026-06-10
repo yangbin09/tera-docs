@@ -101,7 +101,7 @@ xiaoyangyx.top
 这一步完成后，Netlify 就知道：
 
 > 以后访问 xiaoyangyx.top，就打开这个 Netlify 项目。
-![[img-05-01.png]]
+![](img/img-05-01.png)
 
 ---
 
@@ -121,7 +121,7 @@ xiaoyangyx.top
 xiaoyangyx.top
 ```
 
-![[img-05-02.png]]
+![](img/img-05-02.png)
 然后进入解析设置。
 
 如果绑定主域名，一般需要配置主机记录：
@@ -143,14 +143,14 @@ www
 ```
 
 简单理解：
-![[img-05-03.png]]
-![[img-05-04.png]]
+![](img/img-05-03.png)
+![](img/img-05-04.png)
 ```text
 @    代表 xiaoyangyx.top
 www  代表 www.xiaoyangyx.top
 ```
 
-![[img-05-05.png]]
+![](img/img-05-05.png)
 配置完成后，阿里云负责把访问请求指向 Netlify 项目。
 
 这里最容易错的是：不要把完整页面路径写进 DNS。
@@ -192,7 +192,7 @@ www.xiaoyangyx.top
 xiaoyangyx.top
 ```
 
-![[img-05-06.png]]
+![](img/img-05-06.png)
 这说明两个地址都已经被证书覆盖。
 
 正常情况下，浏览器打开：
@@ -203,7 +203,7 @@ https://xiaoyangyx.top/
 
 地址栏会显示安全锁。
 
-![[img-05-07.png]]
+![](img/img-05-07.png)
 如果刚配置完时提示“不安全”，不要马上重配。
 
 一般先检查三件事：
