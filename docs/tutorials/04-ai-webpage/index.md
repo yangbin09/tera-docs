@@ -39,9 +39,16 @@ sidebarTitle: 04 AI 网页制作
 
 **解决**：临时地址不方便分享。
 
+### [06 工具与服务清单](./06-tools-and-services)
+
+把 01-05 用到的所有工具、服务、官网链接聚成一张总表，方便随时查阅。
+
+**解决**：想找某个工具是干嘛的、官网在哪。
+
 ## 快速开始
 
 1. **完全没做过网页**：先看 [千问生成基础网页](./01-qwen-basic-webpage)，最简单
 2. **已有 V1 基础版**：用 [Claude Code 加入图片](./02-claude-code-assets) 升级
 3. **想要更好的视觉效果**：[UX/UI Skill 精修](./03-uxmax-skill-polish) 进一步打磨
 4. **要对外发布**：[Netlify 部署](./04-netlify-one-project-deploy) + [绑定域名](./05-domain-dns-binding)
+5. **想快速看用到哪些工具**：[工具与服务清单](./06-tools-and-services)
